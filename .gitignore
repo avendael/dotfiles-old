@@ -1,0 +1,9 @@
+# Emacs files that might be site-local or contains sensitive data
+emacs/.emacs.d/tramp
+emacs/auto-save-list
+emacs/backups
+emacs/%*
+*.elc
+*~
+
+*.pyc
