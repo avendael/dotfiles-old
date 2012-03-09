@@ -113,7 +113,9 @@
 
 ;;-- Extensions --;;
 (load "~/.emacs.d/startup/maxframe")
+(load "~/.emacs.d/startup/nxhtml")
 (load "~/.emacs.d/startup/color-theme")
+(load "~/.emacs.d/startup/uniquify.el")
 (load "~/.emacs.d/startup/yasnippet")
 (load "~/.emacs.d/startup/pymacs")
 (load "~/.emacs.d/startup/rope")
