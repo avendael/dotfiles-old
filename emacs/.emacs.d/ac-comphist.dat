@@ -1,78 +1,80 @@
-((("get_object_or_404" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("render_to_response" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("latest_poll_list" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("nil" .
-   [1 0 0])
-  ("mumamo-background-colors" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
-  ("django-html-mumamo-mode" .
-   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1])
-  ("append" .
-   [1 0 0 0 0 0])
-  ("auto-mode-alist" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 2])
-  ("mf-display-padding-height" .
-   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("equal" .
-   [0 0 0 1 0])
-  ("eq" .
-   [1 0])
-  ("when" .
-   [0 0 0 1])
-  ("flymake-log-level" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("flymake" .
-   [0 0 0 0 0 0 1])
-  ("setq" .
-   [5 0 0 0])
-  ("cua-mode" .
-   [0 0 0 0 0 0 0 1])
-  ("menu" .
-   [1 0 0 0])
-  ("define-key" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("for" .
-   [1 0 1])
-  ("get_coach_data" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("the" .
-   [2 0 0])
-  ("maximize-frame" .
-   [0 0 0 0 0 1 0 0 0 0 0 0 0 0])
-  ("require" .
-   [1 0 0 0 0 0 0])
-  ("add-hook" .
-   [0 0 0 1 0 0 0 0])
-  ("window-setup-hook" .
-   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
-  ("load" .
-   [2 0 0 2])
-  ("system-type" .
-   [1 0 0 0 0 0 0 0 0 1 0])
-  ("system-name" .
-   [1 0 0 0 0 0 1 0 0 0 0])
-  ("concat" .
-   [3 0 0 0 0 0])
-  ("getenv" .
-   [3 0 0 0 0 0])
-  ("add-to-list" .
-   [0 0 0 0 0 0 0 0 0 2 0])
-  ("exec-path" .
-   [0 0 0 0 0 0 0 1 0])
-  ("list" .
-   [1 0 0 0])
-  ("mf-max-height" .
-   [0 0 0 0 0 0 0 0 0 2 1 0 0])
-  ("print" .
-   [3 0 0 0 0])
-  ("mf-max-rows" .
-   [0 0 0 0 0 0 0 0 0 0 1])
-  ("900" .
-   [1 0 0])
+((("HttpResponseRedirect" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("mf-max-display-pixel-height" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
   ("display-pixel-height" .
    [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
-  ("mf-max-display-pixel-height" .
-   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])))
+  ("900" .
+   [1 0 0])
+  ("mf-max-rows" .
+   [0 0 0 0 0 0 0 0 0 0 1])
+  ("print" .
+   [3 0 0 0 0])
+  ("mf-max-height" .
+   [0 0 0 0 0 0 0 0 0 2 1 0 0])
+  ("list" .
+   [1 0 0 0])
+  ("exec-path" .
+   [0 0 0 0 0 0 0 1 0])
+  ("add-to-list" .
+   [0 0 0 0 0 0 0 0 0 2 0])
+  ("getenv" .
+   [3 0 0 0 0 0])
+  ("concat" .
+   [3 0 0 0 0 0])
+  ("system-name" .
+   [1 0 0 0 0 0 1 0 0 0 0])
+  ("system-type" .
+   [1 0 0 0 0 0 0 0 0 1 0])
+  ("load" .
+   [2 0 0 2])
+  ("window-setup-hook" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("add-hook" .
+   [0 0 0 1 0 0 0 0])
+  ("require" .
+   [1 0 0 0 0 0 0])
+  ("maximize-frame" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("the" .
+   [2 0 0])
+  ("get_coach_data" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("for" .
+   [1 0 1])
+  ("define-key" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("menu" .
+   [1 0 0 0])
+  ("cua-mode" .
+   [0 0 0 0 0 0 0 1])
+  ("setq" .
+   [5 0 0 0])
+  ("flymake" .
+   [0 0 0 0 0 0 1])
+  ("flymake-log-level" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("when" .
+   [0 0 0 1])
+  ("eq" .
+   [1 0])
+  ("equal" .
+   [0 0 0 1 0])
+  ("mf-display-padding-height" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("auto-mode-alist" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 2])
+  ("append" .
+   [1 0 0 0 0 0])
+  ("django-html-mumamo-mode" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1])
+  ("mumamo-background-colors" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("nil" .
+   [1 0 0])
+  ("latest_poll_list" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("render_to_response" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("get_object_or_404" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])))

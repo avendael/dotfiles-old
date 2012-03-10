@@ -1,4 +1,8 @@
+export PS1="\[\e[0;34m\][\u@\h \W]\[\e[0;31m\]\$\[\e[0m\] "
 PYTHON_VENV_HOME=~/Development/Libraries/python-venv
+
+# Include osx specific aliases
+alias ls='ls -G'
 
 function pyvenv() {
     if [ -z "$1" ]; then
