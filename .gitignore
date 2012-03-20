@@ -1,7 +1,8 @@
 # Emacs files that might be site-local or contains sensitive data
 emacs/.emacs.d/tramp
+emacs/.emacs.d/org
+emacs/.emacs.d/backups
 emacs/auto-save-list
-emacs/backups
 emacs/%*
 *.elc
 *~
