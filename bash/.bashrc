@@ -1,7 +1,14 @@
 export PS1="\[\e[0;34m\][\u@\h \W]\[\e[0;34m\]\$\[\e[0m\] "
 PYTHON_VENV_HOME=~/Development/Libraries/python-venv
+INFOPATH=/usr/local/share/info/:/usr/local/info/:/usr/local/gnu/info/:\
+/usr/local/gnu/lib/info/:/usr/local/gnu/lib/emacs/info/:\
+/usr/local/emacs/info/:/usr/local/lib/info/:\
+/usr/local/lib/emacs/info/:/usr/share/info/:\
+/usr/local/Cellar/emacs/23.3b/share/info/emacs/:\
+/usr/local/Cellar/emacs/23.4/share/info/emacs/:\
+/Developer/usr/share/info
 
-# Include osx specific aliases
+#:Include osx specific aliases
 alias ls='ls -G'
 
 function pyvenv() {

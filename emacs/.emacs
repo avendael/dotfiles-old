@@ -123,6 +123,7 @@
 (load "~/.emacs.d/startup/autocomplete-python")
 (load "~/.emacs.d/startup/python")
 (load "~/.emacs.d/startup/flymake-cursor")
+(load "~/.emacs.d/startup/org")
 
 ;;-- Custom functions --;;
 
@@ -147,6 +148,14 @@ print a message in the minibuffer with the result."
       (cd ".."))
     (call-interactively 'compile)))
 
+(setq ctags-path "/usr/local/Cellar/ctags/5.8/bin/ctags")
+(defun create-tags (dir-name)
+  "Create a tag file for the specified project directory. This function
+uses ctags instead of etags."
+  (interactive "DProject Directory: ")
+  (shell-command (format "%s -e -R %s" ctags-path dir-name
+                         (directory-file-name dir-name))))
+
 (defun eshell/clear ()
   (interactive)
   (let ((inhibit-read-only t))
@@ -164,3 +173,54 @@ print a message in the minibuffer with the result."
 
 ;; Start the shell for the initial screen
 (ansi-term "/bin/bash" (concat (getenv "USER") "@" (system-name) ":term"))
+
+;; Define OSX infopaths
+(setq Info-default-directory-list
+      (list "/usr/local/Cellar/emacs/23.4/share/info/emacs/"
+            "/usr/local/Cellar/emacs/23.3b/share/info/emacs/"
+            "/usr/local/share/info/"
+            "/usr/local/info/"
+            "/usr/local/gnu/info/"
+            "/usr/local/gnu/lib/info/"
+            "/usr/local/gnu/lib/emacs/info/"
+            "/usr/local/emacs/info/"
+            "/usr/local/lib/info/"
+            "/usr/local/lib/emacs/info/"
+            "/usr/share/info/"
+            "/Developer/usr/share/info"))
+
+;; Make the scratch buffer persistent
+(defvar persistent-scratch-filename "~/.emacs.d/persistent-scratch"
+  "Location of *scratch* file contents for persistent-scratch.")
+
+(defvar persistent-scratch-backup-dir "~/.emacs.d/backups/persistent-scratch"
+  "Location of backups of the *scratch* buffer contents for persistent-scratch.")
+
+(defun make-persistent-scratch-backup-name ()
+  "Create a filename to backup the current scratch file by concatenating
+PERSISTENT-SCRATCH-BACKUP-DIR with the current date and time."
+  (concat persistent-scratch-backup-dir
+          (replace-regexp-in-string (regexp-quote " ")
+                                    "-"
+                                    (current-time-string))))
+
+(defun save-persistent-scratch ()
+  "Write the contents of *scratch* to the file name PERSISTENT-SCRATCH-FILENAME,
+making a backup copy in PERSISTENT-SCRATCH-BACKUP-DIR."
+  (with-current-buffer (get-buffer "*scratch*")
+    (if (file-exists-p persistent-scratch-filename)
+        (copy-file persistent-scratch-filename
+                   (make-persistent-scratch-backup-name)))
+    (write-region (point-min) (point-max) persistent-scratch-filename)))
+
+(defun load-persistent-scratch ()
+  "Load the contents of PERSISTENT-SCRATCH-FILENAME into the *scratch* buffer,
+clearing its contents first."
+  (if (file-exists-p persistent-scratch-filename)
+      (with-current-buffer (get-buffer "*scratch*")
+        (delete-region (point-min) (point-max))
+        (shell-command (format "cat %s" persistent-scratch-filename)
+                       (current-buffer)))))
+
+(load-persistent-scratch)
+(push #'save-persistent-scratch kill-emacs-hook)
