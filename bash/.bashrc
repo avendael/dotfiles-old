@@ -1,4 +1,4 @@
-export PS1="\[\e[0;34m\][\u@\h \W]\[\e[0;34m\]\$\[\e[0m\] "
+export PS1="\[\e[0;34m\][\u@\h \[\e[0;32m\]\W\[\e[0;34m\]]\[\e[0;33m\]\\$\[\e[0m\] "
 PYTHON_VENV_HOME=~/Development/Libraries/python-venv
 INFOPATH=/usr/local/share/info/:/usr/local/info/:/usr/local/gnu/info/:\
 /usr/local/gnu/lib/info/:/usr/local/gnu/lib/emacs/info/:\
