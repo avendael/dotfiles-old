@@ -189,6 +189,21 @@ uses ctags instead of etags."
             "/usr/share/info/"
             "/Developer/usr/share/info"))
 
+(defun remote-term (new-buffer-name cmd &rest switches)
+  "Open a remote terminal with the specified arguments.
+
+new-buffer-name: The name to be used for the buffer to be opened.
+cmd: The command to be used for remote connection ie. ssh.
+switches: Arguments for cmd ie. avendael@remote-host.com"
+  (setq term-ansi-buffer-name (concat "*" new-buffer-name "*"))
+  (setq term-ansi-buffer-name (generate-new-buffer-name term-ansi-buffer-name))
+  (setq term-ansi-buffer-name (apply 'make-term term-ansi-buffer-name cmd nil switches))
+  (set-buffer term-ansi-buffer-name)
+  (term-mode)
+  (term-char-mode)
+  (term-set-escape-char ?\C-x)
+  (switch-to-buffer term-ansi-buffer-name))
+
 ;; Make the scratch buffer persistent
 (defvar persistent-scratch-filename "~/.emacs.d/persistent-scratch"
   "Location of *scratch* file contents for persistent-scratch.")
