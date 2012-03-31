@@ -1,4 +1,8 @@
-((("sgml-quick-keys" .
+((("INFOPATH" .
+   [0 0 0 0 1 0 0 0])
+  ("mf" .
+   [1 0])
+  ("sgml-quick-keys" .
    [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
   ("HttpResponseRedirect" .
    [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
@@ -23,13 +27,13 @@
   ("getenv" .
    [3 0 0 0 0 0])
   ("concat" .
-   [3 0 0 0 0 0])
+   [4 0 0 0 0 0])
   ("system-name" .
    [1 0 0 0 0 0 1 0 0 0 0])
   ("system-type" .
    [1 0 0 0 0 0 0 0 0 1 0])
   ("load" .
-   [2 0 0 2])
+   [3 0 0 2])
   ("window-setup-hook" .
    [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
   ("add-hook" .
@@ -39,7 +43,7 @@
   ("maximize-frame" .
    [0 0 0 0 0 1 0 0 0 0 0 0 0 0])
   ("the" .
-   [2 0 0])
+   [6 0 0])
   ("get_coach_data" .
    [1 0 0 0 0 0 0 0 0 0 0 0 0 1])
   ("for" .
@@ -51,7 +55,7 @@
   ("cua-mode" .
    [0 0 0 0 0 0 0 1])
   ("setq" .
-   [6 0 0 0])
+   [9 0 0 0])
   ("flymake" .
    [0 0 0 0 0 0 1])
   ("flymake-log-level" .
@@ -63,7 +67,7 @@
   ("equal" .
    [0 0 0 1 0])
   ("mf-display-padding-height" .
-   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2])
   ("auto-mode-alist" .
    [0 0 0 0 0 0 0 0 0 1 0 0 0 0 2])
   ("append" .
@@ -91,4 +95,96 @@
   ("flymake-xml-init" .
    [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
   ("flymake-allowed-file-name-masks" .
-   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])))
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("1000" .
+   [2 0 0 0])
+  ("in" .
+   [3 0])
+  ("info" .
+   [1 0 0 0])
+  ("defvar" .
+   [1 0 0 0 0 1])
+  ("persistent" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("persistent-scratch." .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("defun" .
+   [2 0 0 0 2])
+  ("Create" .
+   [1 0 0 0 0 0])
+  ("file" .
+   [2 0 0 0])
+  ("filename" .
+   [1 0 0 0 0 0 0 0])
+  ("backup" .
+   [2 0 0 0 0 0])
+  ("current" .
+   [2 0 0 0 0 0 0])
+  ("by" .
+   [1 0])
+  ("time" .
+   [1 0 0 0])
+  ("persistent-scratch-backup-dir" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("replace-regexp-in-string" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("regexp-quote" .
+   [0 0 0 0 0 0 0 0 0 1 0 0])
+  ("current-time-string" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("*scratch*" .
+   [3 0 0 0 0 0 0 0 1])
+  ("name" .
+   [1 0 0 0])
+  ("PERSISTENT-SCRATCH-BACKUP-DIR" .
+   [0 0 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("with-current-buffer" .
+   [0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 1 0 0])
+  ("get-buffer" .
+   [1 0 0 0 0 0 0 0 0 1])
+  ("if" .
+   [2 0])
+  ("file-exists-p" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 1])
+  ("persistent-scratch-filename" .
+   [0 0 0 0 0 0 0 0 2 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 2])
+  ("copy-file" .
+   [0 0 0 0 0 0 0 1 0])
+  ("make-persistent-scratch-backup-name" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("write-region" .
+   [0 0 0 0 0 0 0 0 1 0 0 0])
+  ("point-min" .
+   [0 0 0 0 0 0 0 0 2])
+  ("point-max" .
+   [0 0 0 0 0 0 0 0 2])
+  ("contents" .
+   [1 0 0 0 0 0 0 0])
+  ("PERSISTENT-SCRATCH-FILENAME" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("buffer" .
+   [1 0 0 0 0 0])
+  ("clear" .
+   [1 0 0 0 0])
+  ("first" .
+   [1 0 0 0 0])
+  ("delete-region" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("shell-command" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("format" .
+   [1 0 0 0 0 1])
+  ("current-buffer" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0])
+  ("load-persistent-scratch" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0])
+  ("push" .
+   [1 0 0 0])
+  ("save-persistent-scratch" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("kill-emacs-hook" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("interactive" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("remote-term" .
+   [1 0 0 0 0 0 0 0 0 0 0])))

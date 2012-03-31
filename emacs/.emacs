@@ -125,8 +125,10 @@
 (load "~/.emacs.d/startup/flymake-cursor")
 (load "~/.emacs.d/startup/org")
 
-;;-- Custom functions --;;
+;;-- This file will not be present in the repository for obvious reasons --;;
+(load "~/.emacs.d/remote-hosts")
 
+;;-- Custom functions --;;
 (defun count-words-buffer ()
   "Count the number of words in the current buffer;
 print a message in the minibuffer with the result."
