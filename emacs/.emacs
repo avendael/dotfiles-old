@@ -215,6 +215,35 @@ host: The remote host to connect to."
                "ssh"
                (concat username "@" host)))
 
+(defun open-dir-term (new-buffer-name dirname)
+  "Open a terminal to the specified root directory.
+
+new-buffer-name: The name to be used for the buffer to be opened.
+project-dir: The directory to open a shell to."
+  (with-current-buffer (get-buffer "*scratch*")
+    (cd dirname)
+    (setq term-ansi-buffer-name new-buffer-name)
+    (setq term-ansi-buffer-name (generate-new-buffer-name term-ansi-buffer-name))
+    (setq term-ansi-buffer-name (apply 'make-term term-ansi-buffer-name
+                                       (concat "/bin/bash" nil nil)
+                                       nil nil))
+    (set-buffer term-ansi-buffer-name)
+    (term-mode)
+    (term-char-mode)
+    (term-set-escape-char ?\C-x)
+    (switch-to-buffer term-ansi-buffer-name)))
+
+(defun project-term (project-dir)
+  "Open a terminal to the specified directory.
+
+project-dir: The project root directory"
+  (interactive "DProject DIR: ")
+  (open-project-term
+   (concat (if (string= (car (last (split-string project-dir "/"))) "")
+               (car (last (split-string project-dir "/" 2)))
+             (car (last (split-string project-dir "/"))))
+           ".proj:term") project-dir))
+
 ;; Make the scratch buffer persistent
 (defvar persistent-scratch-filename "~/.emacs.d/persistent-scratch"
   "Location of *scratch* file contents for persistent-scratch.")
