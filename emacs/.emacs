@@ -216,7 +216,7 @@ host: The remote host to connect to."
                (concat username "@" host)))
 
 (defun open-dir-term (new-buffer-name dirname)
-  "Open a terminal to the specified root directory.
+  "Open a terminal to the specified directory.
 
 new-buffer-name: The name to be used for the buffer to be opened.
 project-dir: The directory to open a shell to."
@@ -234,11 +234,11 @@ project-dir: The directory to open a shell to."
     (switch-to-buffer term-ansi-buffer-name)))
 
 (defun project-term (project-dir)
-  "Open a terminal to the specified directory.
+  "Open a terminal to the specified project directory.
 
 project-dir: The project root directory"
   (interactive "DProject DIR: ")
-  (open-project-term
+  (open-dir-term
    (concat (if (string= (car (last (split-string project-dir "/"))) "")
                (car (last (split-string project-dir "/" 2)))
              (car (last (split-string project-dir "/"))))
