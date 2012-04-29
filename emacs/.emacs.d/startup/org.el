@@ -12,15 +12,15 @@
 (setq org-complete-tags-always-offer-all-agenda-tags t)
 (add-to-list 'auto-mode-alist
              '("\\.\\(org\\|org.archive\\|txt\\)$" . org-mode))
-(add-hook 'org-mode-hook 'turn-on-flyspell 'append)
+;(add-hook 'org-mode-hook 'turn-on-flyspell 'append)
 (setq org-disputed-keys
-      (quote (([(shift up)] . [(meta p)])
-              ([(shift down)] . [(meta n)])
-              ([(shift left)] . [(meta \[)])
-              ([(shift right)] . [(meta \])])
-              ([(control shift right)] . [(meta P)])
-              ([(control shift left)] . [(meta N)])
-              ([(control return)] . [(control meta return)]))))
+      (quote (([(shift up)] . [(meta p)]) ;; org-shiftup
+              ([(shift down)] . [(meta n)]) ;; org-shiftdown
+              ([(shift left)] . [(meta \[)]) ;; org-shiftleft
+              ([(shift right)] . [(meta \])]) ;; org-shiftright
+              ([(control shift right)] . [(meta P)]) ;; org-shiftcontrolright
+              ([(control shift left)] . [(meta N)]) ;; org-shiftcontrolleft
+              ([(control return)] . [(control meta return)])))) ;; org-insert-todo-heading
 (setq org-replace-disputed-keys t)
 (setq org-log-done t)
 (setq org-agenda-files (list "~/Dropbox/org/work.org"

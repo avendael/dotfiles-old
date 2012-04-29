@@ -107,6 +107,12 @@
 ;; Disable CUA keys
 (setq cua-enable-cua-keys nil)
 
+;; Lambda mode
+(load "~/.emacs.d/extensions/lambda/lambda-mode")
+(require 'lambda-mode)
+(setq lambda-symbol (string (make-char 'greek-iso8859-7 107)))
+(add-hook 'emacs-lisp-mode-hook #'lambda-mode 1)
+
 ;; Remapped keys
 ;(define-key ctl-x-map "?" 'help-command)
 ;(define-key global-map "\C-h" 'backward-delete-char-untabify)
