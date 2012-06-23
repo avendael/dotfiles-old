@@ -29,7 +29,7 @@
 (size-indication-mode t)
 
 ;; Hide the scrollbar
-(scroll-bar-mode nil)
+(set-scroll-bar-mode nil)
 
 ;; Use spaces instead of tabs for indents
 (setq-default indent-tabs-mode nil)
