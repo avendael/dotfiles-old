@@ -1,8 +1,10 @@
 EDITOR="/usr/local/Cellar/emacs/23.4/bin/emacsclient"
 export PS1="\[\e[0;34m\][\u@\h \[\e[0;32m\]\W\[\e[0;34m\]]\[\e[0;33m\]\\$\[\e[0m\] "
 export PYTHON_VENV_HOME=~/Development/Libraries/python-venv
+export ANDROID_SDK_HOME=~/Development/Libraries/android-sdk-macosx
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages/:${PYTHONPATH}
-export PATH=~/bin:/usr/local/Cellar/ctags/5.8/bin:/usr/local/bin:/usr/local/sbin:${PATH}
+export PATH=~/bin:${ANDROID_SDK_HOME}/tools:/usr/local/Cellar/ctags/5.8/bin:\
+/usr/local/bin:/usr/local/sbin:${PATH}
 export INFOPATH=/usr/local/share/info/:/usr/local/info/:/usr/local/gnu/info/:\
 /usr/local/gnu/lib/info/:/usr/local/gnu/lib/emacs/info/:\
 /usr/local/emacs/info/:/usr/local/lib/info/:\

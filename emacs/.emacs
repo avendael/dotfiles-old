@@ -130,6 +130,7 @@
 (load "~/.emacs.d/startup/python")
 (load "~/.emacs.d/startup/flymake-cursor")
 (load "~/.emacs.d/startup/org")
+(load "~/.emacs.d/startup/edit-server")
 
 ;;-- This file will not be present in the repository for obvious reasons --;;
 (load "~/.emacs.d/remote-hosts")
