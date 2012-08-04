@@ -13,6 +13,13 @@
 (add-to-list 'auto-mode-alist
              '("\\.\\(org\\|org.archive\\|txt\\)$" . org-mode))
 ;(add-hook 'org-mode-hook 'turn-on-flyspell 'append)
+(add-hook 'org-mode-hook
+          (lambda ()
+            (local-set-key (kbd "C-c M-<") 'org-metaleft)
+            (local-set-key (kbd "C-c M->") 'org-metaright)
+            (local-set-key (kbd "C-c s M-<") 'org-shiftmetaleft)
+            (local-set-key (kbd "C-c s M->") 'org-shiftmetaright)))
+
 (setq org-disputed-keys
       (quote (([(shift up)] . [(meta p)]) ;; org-shiftup
               ([(shift down)] . [(meta n)]) ;; org-shiftdown

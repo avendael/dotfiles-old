@@ -49,15 +49,22 @@
 ;; Tell emacs to shutup when starting up
 (setq inhibit-startup-message t)
 
+;; The directory where projects are located
+(setq root-project-directory "/Users/avendael/Development/Projects/")
+
 ;; Fix OSX paths
 (when (equal system-type 'darwin) (load "~/.emacs.d/startup/osx-path"))
 
 ;;-- ELPA --;;
 
-(when
-    (load
-     (expand-file-name "~/.emacs.d/elpa/package.el"))
-  (package-initialize))
+(require 'package)
+(package-initialize)
+(add-to-list 'package-archives
+             '("marmalade" . "http://marmalade-repo.org/packages/") t)
+(add-to-list 'custom-safe-themes
+             "cead5b757549e6272f7ffebbb87e190dc2b4036e4d035ba2eefdc41a23ba11a9"
+             "71b172ea4aad108801421cc5251edb6c792f3adbaecfa1c52e94e3d99634dee7")
+(load-theme 'zenburn t)
 
 ;; IDO Mode --;;
 
@@ -118,15 +125,15 @@
 ;(define-key global-map "\C-h" 'backward-delete-char-untabify)
 
 ;;-- Extensions --;;
-(load "~/.emacs.d/startup/maxframe")
-(load "~/.emacs.d/startup/nxhtml")
-(load "~/.emacs.d/startup/color-theme")
+;; To be replaced by elpa-marmalade extensions
+;(load "~/.emacs.d/startup/maxframe")
+;(load "~/.emacs.d/startup/nxhtml")
 (load "~/.emacs.d/startup/uniquify.el")
 (load "~/.emacs.d/startup/yasnippet")
-(load "~/.emacs.d/startup/pymacs")
-(load "~/.emacs.d/startup/rope")
+;(load "~/.emacs.d/startup/pymacs")
+;(load "~/.emacs.d/startup/rope")
 (load "~/.emacs.d/startup/autocomplete")
-(load "~/.emacs.d/startup/autocomplete-python")
+;(load "~/.emacs.d/startup/autocomplete-python")
 (load "~/.emacs.d/startup/python")
 (load "~/.emacs.d/startup/flymake-cursor")
 (load "~/.emacs.d/startup/org")
@@ -134,6 +141,10 @@
 
 ;;-- This file will not be present in the repository for obvious reasons --;;
 (load "~/.emacs.d/remote-hosts")
+
+;; Start the shell for the initial screen
+(setq ansi-term-color-vector [unspecified "#3f3f3f" "#cc9393" "#7f9f7f" "#f0dfaf" "#8cd0d3" "#dc8cc3" "#93e0e3" "#dcdccc"])
+(ansi-term "/bin/bash" (concat (getenv "USER") "@" (system-name) ":term"))
 
 ;;-- Custom functions --;;
 (defun count-words-buffer ()
@@ -180,23 +191,6 @@ uses ctags instead of etags."
         (untabify (1- (point)) (point-max))))
   nil)
 
-;; Start the shell for the initial screen
-(ansi-term "/bin/bash" (concat (getenv "USER") "@" (system-name) ":term"))
-
-;; Define OSX infopaths
-(setq Info-default-directory-list
-      (list "/usr/local/Cellar/emacs/23.4/share/info/emacs/"
-            "/usr/local/share/info/"
-            "/usr/local/info/"
-            "/usr/local/gnu/info/"
-            "/usr/local/gnu/lib/info/"
-            "/usr/local/gnu/lib/emacs/info/"
-            "/usr/local/emacs/info/"
-            "/usr/local/lib/info/"
-            "/usr/local/lib/emacs/info/"
-            "/usr/share/info/"
-            "/Developer/usr/share/info"))
-
 (defun open-remote-term (new-buffer-name cmd &rest switches)
   "Open a remote terminal with the specified arguments.
 
@@ -241,6 +235,14 @@ project-dir: The directory to open a shell to."
     (switch-to-buffer term-ansi-buffer-name)))
 
 (defun project-term (project-dir)
+  "Open a terminal starting at the default directory where projects are
+located.
+
+project-dir: The project root directory"
+  (interactive (let ((default-directory root-project-directory))
+                 (call-interactively 'open-project-term))))
+
+(defun open-project-term (project-dir)
   "Open a terminal to the specified project directory.
 
 project-dir: The project root directory"
@@ -249,7 +251,8 @@ project-dir: The project root directory"
    (concat (if (string= (car (last (split-string project-dir "/"))) "")
                (car (last (split-string project-dir "/" 2)))
              (car (last (split-string project-dir "/"))))
-           ".proj:term") project-dir))
+           ".proj:term") project-dir)
+  (list project-dir))
 
 ;; Make the scratch buffer persistent
 (defvar persistent-scratch-filename "~/.emacs.d/persistent-scratch"
