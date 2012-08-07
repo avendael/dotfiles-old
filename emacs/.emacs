@@ -49,6 +49,9 @@
 ;; Tell emacs to shutup when starting up
 (setq inhibit-startup-message t)
 
+;; Automatically follow symlinks of version controlled files
+(setq vc-follow-symlinks 1)
+
 ;; The directory where projects are located
 (setq root-project-directory "/Users/avendael/Development/Projects/")
 
@@ -121,6 +124,7 @@
 (add-hook 'emacs-lisp-mode-hook #'lambda-mode 1)
 
 ;; Remapped keys
+(global-set-key (kbd "C-M-<f11>") 'ns-toggle-fullscreen)
 ;(define-key ctl-x-map "?" 'help-command)
 ;(define-key global-map "\C-h" 'backward-delete-char-untabify)
 
@@ -128,7 +132,7 @@
 ;; To be replaced by elpa-marmalade extensions
 ;(load "~/.emacs.d/startup/maxframe")
 ;(load "~/.emacs.d/startup/nxhtml")
-(load "~/.emacs.d/startup/uniquify.el")
+(load "~/.emacs.d/startup/uniquify")
 (load "~/.emacs.d/startup/yasnippet")
 ;(load "~/.emacs.d/startup/pymacs")
 ;(load "~/.emacs.d/startup/rope")
@@ -137,13 +141,14 @@
 (load "~/.emacs.d/startup/python")
 (load "~/.emacs.d/startup/flymake-cursor")
 (load "~/.emacs.d/startup/org")
-(load "~/.emacs.d/startup/edit-server")
 
 ;;-- This file will not be present in the repository for obvious reasons --;;
 (load "~/.emacs.d/remote-hosts")
 
 ;; Start the shell for the initial screen
-(setq ansi-term-color-vector [unspecified "#3f3f3f" "#cc9393" "#7f9f7f" "#f0dfaf" "#8cd0d3" "#dc8cc3" "#93e0e3" "#dcdccc"])
+(setq ansi-term-color-vector [unspecified "#3f3f3f" "#cc9393" "#7f9f7f"
+                                          "#f0dfaf" "#94bff3" "#dc8cc3"
+                                          "#93e0e3" "#dcdccc"])
 (ansi-term "/bin/bash" (concat (getenv "USER") "@" (system-name) ":term"))
 
 ;;-- Custom functions --;;
