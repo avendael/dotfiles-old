@@ -1,8 +1,8 @@
 ;;-- Flymake Cursor --;;
-(add-to-list 'load-path
-	     (expand-file-name "~/.emacs.d/extensions/flymake/"))
 
 (add-hook 'find-file-hook 'flymake-find-file-hook)
+(setq flymake-gui-warnings-enabled nil)
+
 (when (load "flymake" t)
   (defun flymake-pyflakes-init ()
     (let* ((temp-file (flymake-init-create-temp-buffer-copy

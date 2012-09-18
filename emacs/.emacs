@@ -52,11 +52,16 @@
 ;; Automatically follow symlinks of version controlled files
 (setq vc-follow-symlinks 1)
 
+;; Sentence ends with only one space
+(setq sentence-end-double-space nil)
+
 ;; The directory where projects are located
 (setq root-project-directory "/Users/avendael/Development/Projects/")
 
-;; Fix OSX paths
-(when (equal system-type 'darwin) (load "~/.emacs.d/startup/osx-path"))
+;; Fix OSX paths and bindings
+(when (equal system-type 'darwin)
+  (load "~/.emacs.d/startup/osx-path")
+)
 
 ;;-- ELPA --;;
 
@@ -69,12 +74,36 @@
              "71b172ea4aad108801421cc5251edb6c792f3adbaecfa1c52e94e3d99634dee7")
 (load-theme 'zenburn t)
 
-;; IDO Mode --;;
+;;-- IDO Mode --;;
 
 (require 'ido)
+(require 'ido-ubiquitous)
 (ido-mode)
 (setq ido-enable-flex-matching t
       ido-everywhere t)
+(ido-ubiquitous-mode)
+
+;;-- SMEX --;;
+
+(require 'smex)
+(smex-initialize)
+(global-set-key (kbd "M-x") 'smex)
+
+;;-- Expand Region --;;
+
+(require 'expand-region)
+(global-set-key (kbd "C-M-S-SPC") 'er/expand-region)
+
+;;-- Chrome Edit Server --;;
+
+(load "~/.emacs.d/extensions/edit-server")
+(require 'edit-server)
+(edit-server-start)
+
+;;-- Tramp --;;
+
+; Workaround for ssh config ControlMaster auto and ControlPersist yes
+(setq tramp-default-method "scpx")
 
 ;;-- Shell Mode --;;
 
@@ -125,19 +154,19 @@
 
 ;; Remapped keys
 (global-set-key (kbd "C-M-<f11>") 'ns-toggle-fullscreen)
+(global-set-key (kbd "C-c C-M-S-c") 'crosshairs)
 ;(define-key ctl-x-map "?" 'help-command)
 ;(define-key global-map "\C-h" 'backward-delete-char-untabify)
 
 ;;-- Extensions --;;
-;; To be replaced by elpa-marmalade extensions
 ;(load "~/.emacs.d/startup/maxframe")
 ;(load "~/.emacs.d/startup/nxhtml")
 (load "~/.emacs.d/startup/uniquify")
 (load "~/.emacs.d/startup/yasnippet")
-;(load "~/.emacs.d/startup/pymacs")
-;(load "~/.emacs.d/startup/rope")
+(load "~/.emacs.d/startup/pymacs")
+(load "~/.emacs.d/startup/rope")
 (load "~/.emacs.d/startup/autocomplete")
-;(load "~/.emacs.d/startup/autocomplete-python")
+(load "~/.emacs.d/startup/autocomplete-python")
 (load "~/.emacs.d/startup/python")
 (load "~/.emacs.d/startup/flymake-cursor")
 (load "~/.emacs.d/startup/org")
@@ -145,10 +174,11 @@
 ;;-- This file will not be present in the repository for obvious reasons --;;
 (load "~/.emacs.d/remote-hosts")
 
-;; Start the shell for the initial screen
+;; Temporary workaround for the zenburn ansi-term colors
 (setq ansi-term-color-vector [unspecified "#3f3f3f" "#cc9393" "#7f9f7f"
                                           "#f0dfaf" "#94bff3" "#dc8cc3"
                                           "#93e0e3" "#dcdccc"])
+;; Start the shell for the initial screen
 (ansi-term "/bin/bash" (concat (getenv "USER") "@" (system-name) ":term"))
 
 ;;-- Custom functions --;;
