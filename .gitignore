@@ -10,3 +10,6 @@ emacs/%*
 *~
 
 *.pyc
+/emacs/.emacs.d/.org-id-locations
+/emacs/.emacs.d/elpa/typing-1.1.4/typing-pkg.el
+/emacs/.emacs.d/elpa/typing-1.1.4/typing.el
