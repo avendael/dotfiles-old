@@ -56,7 +56,7 @@
 (setq sentence-end-double-space nil)
 
 ;; The directory where projects are located
-(setq root-project-directory "/Users/avendael/Development/Projects/")
+(setq root-project-directory (concat "/Users/" (getenv "USER") "/Development/Projects/"))
 
 ;; Fix OSX paths and bindings
 (when (equal system-type 'darwin)
