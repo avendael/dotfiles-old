@@ -1,260 +1,260 @@
-((("org-use-fast-todo-selection" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
-  ("org-use-fast-tag-selection" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("org-outline-path-complete-in-steps" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("emacs" .
-   [1 0 0 0 0])
-  ("EMACS" .
-   [1 0 0 0 0])
-  ("export" .
-   [4 0 0 0 0 0])
-  ("remote-term" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("interactive" .
-   [1 0 0 0 0 0 0 0 0 0 1])
-  ("kill-emacs-hook" .
-   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
-  ("save-persistent-scratch" .
-   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("push" .
-   [1 0 0 0])
-  ("load-persistent-scratch" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0])
-  ("current-buffer" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 1 0])
-  ("format" .
-   [1 0 0 0 0 1])
-  ("shell-command" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("delete-region" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("first" .
-   [1 0 0 0 0])
-  ("clear" .
-   [1 0 0 0 0])
-  ("buffer" .
-   [1 0 0 0 0 0])
-  ("PERSISTENT-SCRATCH-FILENAME" .
-   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("contents" .
-   [1 0 0 0 0 0 0 0])
-  ("point-max" .
-   [0 0 0 0 0 0 0 0 2])
-  ("point-min" .
-   [0 0 0 0 0 0 0 0 2])
-  ("write-region" .
-   [0 0 0 0 0 0 0 0 1 0 0 0])
-  ("make-persistent-scratch-backup-name" .
-   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("copy-file" .
-   [0 0 0 0 0 0 0 1 0])
-  ("persistent-scratch-filename" .
-   [0 0 0 0 0 0 0 0 2 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 2])
-  ("file-exists-p" .
-   [0 0 0 0 0 0 0 0 1 0 0 0 1])
-  ("if" .
-   [2 0])
-  ("get-buffer" .
-   [1 0 0 0 0 0 0 0 0 2])
-  ("with-current-buffer" .
-   [0 0 0 0 0 0 0 0 0 0 2 1 0 0 0 0 1 0 0])
-  ("PERSISTENT-SCRATCH-BACKUP-DIR" .
-   [0 0 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("name" .
-   [1 0 0 0])
-  ("*scratch*" .
-   [3 0 0 0 0 0 0 0 1])
-  ("current-time-string" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("regexp-quote" .
-   [0 0 0 0 0 0 0 0 0 1 0 0])
-  ("replace-regexp-in-string" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
-  ("persistent-scratch-backup-dir" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
-  ("time" .
-   [1 0 0 0])
-  ("by" .
-   [1 0])
-  ("current" .
-   [2 0 0 0 0 0 0])
-  ("backup" .
-   [2 0 0 0 0 0])
-  ("filename" .
-   [1 0 0 0 0 0 0 0])
-  ("file" .
-   [2 0 0 0])
-  ("Create" .
-   [1 0 0 0 0 0])
-  ("defun" .
-   [2 0 0 0 4])
-  ("persistent-scratch." .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("persistent" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("defvar" .
-   [1 0 0 0 0 1])
-  ("info" .
-   [1 0 0 0])
-  ("in" .
-   [3 0])
-  ("1000" .
-   [2 0 0 0])
-  ("flymake-allowed-file-name-masks" .
-   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("flymake-xml-init" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("delete" .
-   [0 0 0 0 0 1])
-  ("html-mode" .
-   [0 0 0 0 0 0 1 0 0])
-  ("nxhtml-mode" .
-   [0 0 0 0 0 0 0 0 0 1 0])
-  ("yas/define-snippets" .
-   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
-  ("get_object_or_404" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("render_to_response" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("latest_poll_list" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("nil" .
-   [20 0 0])
-  ("mumamo-background-colors" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
-  ("django-html-mumamo-mode" .
-   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1])
-  ("append" .
-   [1 0 0 0 0 0])
-  ("auto-mode-alist" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 2])
-  ("mf-display-padding-height" .
-   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2])
-  ("equal" .
-   [0 0 0 1 0])
-  ("eq" .
-   [1 0])
-  ("when" .
-   [0 0 0 1])
-  ("flymake-log-level" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("flymake" .
-   [0 0 0 0 0 0 1])
-  ("setq" .
-   [22 0 0 1])
-  ("cua-mode" .
-   [0 0 0 0 0 0 0 1])
-  ("menu" .
-   [1 0 0 0])
-  ("define-key" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("for" .
-   [2 0 1])
-  ("get_coach_data" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("the" .
-   [6 0 0])
-  ("maximize-frame" .
-   [0 0 0 0 0 1 0 0 0 0 0 0 0 0])
-  ("require" .
-   [1 0 0 0 0 0 0])
-  ("add-hook" .
-   [0 0 0 1 0 0 0 0])
-  ("window-setup-hook" .
-   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
-  ("load" .
-   [3 0 0 2])
-  ("system-type" .
-   [1 0 0 0 0 0 0 0 0 1 0])
-  ("system-name" .
-   [1 0 0 0 0 0 1 0 0 0 0])
-  ("concat" .
-   [6 0 0 0 0 0])
-  ("getenv" .
-   [3 0 0 0 0 0])
-  ("add-to-list" .
-   [0 0 0 0 0 0 0 0 0 2 0])
-  ("exec-path" .
-   [0 0 0 0 0 0 0 1 0])
-  ("list" .
-   [1 0 0 0])
-  ("mf-max-height" .
-   [0 0 0 0 0 0 0 0 0 2 1 0 0])
-  ("print" .
-   [3 0 0 0 0])
-  ("mf-max-rows" .
-   [0 0 0 0 0 0 0 0 0 0 1])
-  ("900" .
-   [1 0 0])
-  ("display-pixel-height" .
-   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
-  ("mf-max-display-pixel-height" .
-   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("HttpResponseRedirect" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("sgml-quick-keys" .
-   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
-  ("mf" .
-   [1 0])
-  ("INFOPATH" .
-   [0 0 0 0 1 0 0 0])
-  ("return" .
-   [0 0 0 0 0 1])
-  ("new-buffer-name" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("cmd" .
-   [1 0 0])
-  ("term-ansi-buffer-name" .
-   [3 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 2 0 0 0 1])
-  ("generate-new-buffer-name" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0])
-  ("apply" .
-   [1 0 0 0 0])
-  ("make-term" .
-   [2 0 0 0 0 0 0 0 0])
-  ("project-dir" .
-   [4 0 0 0 0 0 0 0 0 0 3])
-  ("set-buffer" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("term-mode" .
-   [1 0 0 0 0 0 0 0 0])
-  ("term-char-mode" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("term-set-escape-char" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("C-x" .
-   [1 0 0])
-  ("switch-to-buffer" .
-   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
-  ("project" .
-   [1 0 0 0 0 0 0])
-  ("open-project-term" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
-  (".proj:term" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("cd" .
-   [2 0])
-  ("make-ter" .
-   [1 0 0 0 0 0 0 0])
-  ("term" .
-   [1 0 0 0])
-  ("term-directory" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("progn" .
-   [1 0 0 0 0])
-  ("org-log-done" .
-   [0 0 0 0 0 0 1 0 0 0 0 0])
-  ("org-todo-keywords" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("quote" .
-   [2 0 0 0 0])
-  ("org-treat-S-cursor-todo-selection-as-state-change" .
-   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("org-todo-state-tags-triggers" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+((("org-directory" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0])
   ("HOLD" .
    [2 0 0 0])
-  ("org-directory" .
-   [0 0 0 0 0 0 0 0 1 0 0 0 0])))
+  ("org-todo-state-tags-triggers" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("org-treat-S-cursor-todo-selection-as-state-change" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("quote" .
+   [2 0 0 0 0])
+  ("org-todo-keywords" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("org-log-done" .
+   [0 0 0 0 0 0 1 0 0 0 0 0])
+  ("progn" .
+   [1 0 0 0 0])
+  ("term-directory" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("term" .
+   [1 0 0 0])
+  ("make-ter" .
+   [1 0 0 0 0 0 0 0])
+  ("cd" .
+   [2 0])
+  (".proj:term" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("open-project-term" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("project" .
+   [1 0 0 0 0 0 0])
+  ("switch-to-buffer" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("C-x" .
+   [1 0 0])
+  ("term-set-escape-char" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("term-char-mode" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("term-mode" .
+   [1 0 0 0 0 0 0 0 0])
+  ("set-buffer" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("project-dir" .
+   [4 0 0 0 0 0 0 0 0 0 3])
+  ("make-term" .
+   [2 0 0 0 0 0 0 0 0])
+  ("apply" .
+   [1 0 0 0 0])
+  ("generate-new-buffer-name" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0])
+  ("term-ansi-buffer-name" .
+   [3 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 2 0 0 0 1])
+  ("cmd" .
+   [1 0 0])
+  ("new-buffer-name" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("return" .
+   [0 0 0 0 0 1])
+  ("INFOPATH" .
+   [0 0 0 0 1 0 0 0])
+  ("mf" .
+   [1 0])
+  ("sgml-quick-keys" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("HttpResponseRedirect" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("mf-max-display-pixel-height" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("display-pixel-height" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("900" .
+   [1 0 0])
+  ("mf-max-rows" .
+   [0 0 0 0 0 0 0 0 0 0 1])
+  ("print" .
+   [3 0 0 0 0])
+  ("mf-max-height" .
+   [0 0 0 0 0 0 0 0 0 2 1 0 0])
+  ("list" .
+   [1 0 0 0])
+  ("exec-path" .
+   [0 0 0 0 0 0 0 1 0])
+  ("add-to-list" .
+   [0 0 0 0 0 0 0 0 0 2 0])
+  ("getenv" .
+   [3 0 0 0 0 0])
+  ("concat" .
+   [6 0 0 0 0 0])
+  ("system-name" .
+   [1 0 0 0 0 0 1 0 0 0 0])
+  ("system-type" .
+   [1 0 0 0 0 0 0 0 0 1 0])
+  ("load" .
+   [3 0 0 2])
+  ("window-setup-hook" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("add-hook" .
+   [0 0 0 1 0 0 0 0])
+  ("require" .
+   [1 0 0 0 0 0 0])
+  ("maximize-frame" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("the" .
+   [6 0 0])
+  ("get_coach_data" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("for" .
+   [2 0 1])
+  ("define-key" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("menu" .
+   [1 0 0 0])
+  ("cua-mode" .
+   [0 0 0 0 0 0 0 1])
+  ("setq" .
+   [22 0 0 1])
+  ("flymake" .
+   [0 0 0 0 0 0 1])
+  ("flymake-log-level" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("when" .
+   [0 0 0 1])
+  ("eq" .
+   [1 0])
+  ("equal" .
+   [0 0 0 1 0])
+  ("mf-display-padding-height" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2])
+  ("auto-mode-alist" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 2])
+  ("append" .
+   [1 0 0 0 0 0])
+  ("django-html-mumamo-mode" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1])
+  ("mumamo-background-colors" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("nil" .
+   [20 0 0])
+  ("latest_poll_list" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("render_to_response" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("get_object_or_404" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("yas/define-snippets" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("nxhtml-mode" .
+   [0 0 0 0 0 0 0 0 0 1 0])
+  ("html-mode" .
+   [0 0 0 0 0 0 1 0 0])
+  ("delete" .
+   [0 0 0 0 0 1])
+  ("flymake-xml-init" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("flymake-allowed-file-name-masks" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("1000" .
+   [2 0 0 0])
+  ("in" .
+   [3 0])
+  ("info" .
+   [1 0 0 0])
+  ("defvar" .
+   [1 0 0 0 0 1])
+  ("persistent" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("persistent-scratch." .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("defun" .
+   [2 0 0 0 4])
+  ("Create" .
+   [1 0 0 0 0 0])
+  ("file" .
+   [2 0 0 0])
+  ("filename" .
+   [1 0 0 0 0 0 0 0])
+  ("backup" .
+   [2 0 0 0 0 0])
+  ("current" .
+   [2 0 0 0 0 0 0])
+  ("by" .
+   [1 0])
+  ("time" .
+   [1 0 0 0])
+  ("persistent-scratch-backup-dir" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("replace-regexp-in-string" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("regexp-quote" .
+   [0 0 0 0 0 0 0 0 0 1 0 0])
+  ("current-time-string" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("*scratch*" .
+   [3 0 0 0 0 0 0 0 1])
+  ("name" .
+   [1 0 0 0])
+  ("PERSISTENT-SCRATCH-BACKUP-DIR" .
+   [0 0 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("with-current-buffer" .
+   [0 0 0 0 0 0 0 0 0 0 2 1 0 0 0 0 1 0 0])
+  ("get-buffer" .
+   [1 0 0 0 0 0 0 0 0 2])
+  ("if" .
+   [2 0])
+  ("file-exists-p" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 1])
+  ("persistent-scratch-filename" .
+   [0 0 0 0 0 0 0 0 2 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 2])
+  ("copy-file" .
+   [0 0 0 0 0 0 0 1 0])
+  ("make-persistent-scratch-backup-name" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("write-region" .
+   [0 0 0 0 0 0 0 0 1 0 0 0])
+  ("point-min" .
+   [0 0 0 0 0 0 0 0 2])
+  ("point-max" .
+   [0 0 0 0 0 0 0 0 2])
+  ("contents" .
+   [1 0 0 0 0 0 0 0])
+  ("PERSISTENT-SCRATCH-FILENAME" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("buffer" .
+   [1 0 0 0 0 0])
+  ("clear" .
+   [1 0 0 0 0])
+  ("first" .
+   [1 0 0 0 0])
+  ("delete-region" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("shell-command" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("format" .
+   [1 0 0 0 0 1])
+  ("current-buffer" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0])
+  ("load-persistent-scratch" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0])
+  ("push" .
+   [1 0 0 0])
+  ("save-persistent-scratch" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("kill-emacs-hook" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("interactive" .
+   [1 0 0 0 0 0 0 0 0 0 1])
+  ("remote-term" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("export" .
+   [4 0 0 0 0 0])
+  ("EMACS" .
+   [1 0 0 0 0])
+  ("emacs" .
+   [1 0 0 0 0])
+  ("org-outline-path-complete-in-steps" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("org-use-fast-tag-selection" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("org-use-fast-todo-selection" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])))

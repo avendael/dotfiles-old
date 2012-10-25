@@ -172,7 +172,7 @@
 (load "~/.emacs.d/startup/org")
 
 ;;-- This file will not be present in the repository for obvious reasons --;;
-(load "~/.emacs.d/remote-hosts")
+;(load "~/.emacs.d/remote-hosts")
 
 ;; Temporary workaround for the zenburn ansi-term colors
 (setq ansi-term-color-vector [unspecified "#3f3f3f" "#cc9393" "#7f9f7f"
