@@ -17,6 +17,10 @@
 ;; Put all backup files in one place
 (setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
 
+;; Put all emacs tmp files in one place
+;(setq temporary-file-directory "~/.emacs.d/tmp")
+;(setq auto-save-file-name-transforms '((".*", temporary-file-directory t)))
+
 ;; Always highlight matching parenthesis
 (show-paren-mode t)
 
@@ -55,6 +59,14 @@
 ;; Sentence ends with only one space
 (setq sentence-end-double-space nil)
 
+;; Always use gnus for email
+(setq mail-user-agent 'gnus-user-agent)
+
+;; Encrypt gpg files
+(require 'epa-file)
+(epa-file-enable)
+(setq epa-file-cache-passphrase-for-symmetric-encryption t)
+
 ;; The directory where projects are located
 (setq root-project-directory "/Users/avendael/Development/Projects/")
 
@@ -81,6 +93,7 @@
 (ido-mode)
 (setq ido-enable-flex-matching t
       ido-everywhere t)
+(ido-ubiquitous-disable-in man)
 (ido-ubiquitous-mode)
 
 ;;-- SMEX --;;
@@ -88,6 +101,10 @@
 (require 'smex)
 (smex-initialize)
 (global-set-key (kbd "M-x") 'smex)
+
+;;-- Additional frame bindings --;;
+(global-set-key (kbd "C-x 5 n") 'ns-next-frame)
+(global-set-key (kbd "C-x 5 p") 'ns-prev-frame)
 
 ;;-- Expand Region --;;
 
@@ -146,6 +163,9 @@
 ;; Disable CUA keys
 (setq cua-enable-cua-keys nil)
 
+;; Electric Pair
+(electric-pair-mode)
+
 ;; Lambda mode
 (load "~/.emacs.d/extensions/lambda/lambda-mode")
 (require 'lambda-mode)
@@ -155,6 +175,7 @@
 ;; Remapped keys
 (global-set-key (kbd "C-M-<f11>") 'ns-toggle-fullscreen)
 (global-set-key (kbd "C-c C-M-S-c") 'crosshairs)
+(global-set-key (kbd "C-x M-f") 'ffip)
 ;(define-key ctl-x-map "?" 'help-command)
 ;(define-key global-map "\C-h" 'backward-delete-char-untabify)
 
@@ -163,11 +184,11 @@
 ;(load "~/.emacs.d/startup/nxhtml")
 (load "~/.emacs.d/startup/uniquify")
 (load "~/.emacs.d/startup/yasnippet")
+(load "~/.emacs.d/startup/python")
 (load "~/.emacs.d/startup/pymacs")
 (load "~/.emacs.d/startup/rope")
 (load "~/.emacs.d/startup/autocomplete")
-(load "~/.emacs.d/startup/autocomplete-python")
-(load "~/.emacs.d/startup/python")
+;(load "~/.emacs.d/startup/autocomplete-python")
 (load "~/.emacs.d/startup/flymake-cursor")
 (load "~/.emacs.d/startup/org")
 
@@ -178,6 +199,7 @@
 (setq ansi-term-color-vector [unspecified "#3f3f3f" "#cc9393" "#7f9f7f"
                                           "#f0dfaf" "#94bff3" "#dc8cc3"
                                           "#93e0e3" "#dcdccc"])
+
 ;; Start the shell for the initial screen
 (ansi-term "/bin/bash" (concat (getenv "USER") "@" (system-name) ":term"))
 
@@ -324,3 +346,10 @@ clearing its contents first."
 
 (load-persistent-scratch)
 (push #'save-persistent-scratch kill-emacs-hook)
+
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(org-hide ((t (:foreground "3f3f3f"))) t))

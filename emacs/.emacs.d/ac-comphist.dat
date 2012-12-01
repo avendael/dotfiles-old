@@ -1,4 +1,360 @@
-((("org-use-fast-todo-selection" .
+((("order_by" .
+   [1 0 0 0 0 0 0 0])
+  ("messages" .
+   [1 0 0 0 0 0 0 0])
+  ("content" .
+   [1 0 0 0 0 0 0])
+  ("__repr__" .
+   [2 0 0 0 0 0 0 0])
+  ("backref" .
+   [3 0 0 0 0 0 0])
+  ("relationship" .
+   [2 0 0 0 0 0 0 0 0 0 0 0])
+  ("ForeignKey" .
+   [1 0 0 0 0 0 0 1 0 0])
+  ("200" .
+   [1 0 0])
+  ("primary_key" .
+   [0 0 0 0 1 0 0 0 0 0 0])
+  ("__tablename__" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("Sequence" .
+   [1 0 0 0 0 0 0 0])
+  ("String" .
+   [3 0 0 0 0 0])
+  ("Integer" .
+   [4 0 0 0 0 0 0])
+  ("Column" .
+   [4 0 0 0 0 0])
+  ("agent" .
+   [5 0 0 0 0])
+  ("Base" .
+   [2 0 0 0])
+  ("Agent" .
+   [4 0 0 0 0])
+  ("declarative_base" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("sqlalchemy" .
+   [3 0 0 0 0 0 0 0 0 0])
+  ("data" .
+   [4 0 0 0])
+  ("_send_message" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("EXIT" .
+   [3 0 0 1])
+  ("CON_COLLECTOR" .
+   [0 0 0 2 2 0 0 1 0 0 0 0 0])
+  ("decode" .
+   [2 0 0 0 0 0])
+  ("_create_agent_logger" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("collector" .
+   [1 0 0 0 0 0 0 0 0])
+  ("debug" .
+   [6 0 0 0 0])
+  ("collector_logger" .
+   [10 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0])
+  ("_create_collector_logger" .
+   [0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("DEBUG" .
+   [1 0 0 0 0])
+  ("addHandler" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("setFormatter" .
+   [0 0 0 0 0 0 0 0 1 0 0 0])
+  ("setLevel" .
+   [2 0 0 0 0 0 0 0])
+  ("Formatter" .
+   [1 0 0 0 0 0 0 0 0])
+  ("formatter" .
+   [1 0 0 0 0 0 0 0 1])
+  ("handlers" .
+   [1 0 0 0 0 0 0 0])
+  ("hasHandlers" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("getLogger" .
+   [4 0 0 0 0 0 0 1 0])
+  ("logging" .
+   [9 0 0 0 0 0 0])
+  ("current_thread" .
+   [0 0 0 0 1 0 0 1 0 0 0 0 0 0])
+  ("threading" .
+   [2 0 0 0 0 0 0 0 0])
+  ("connstream" .
+   [2 0 0 0 0 0 0 0 0 0])
+  ("sys" .
+   [4 0 0])
+  ("start" .
+   [1 0 0 0 0])
+  ("keepalive_thread" .
+   [2 0 0 0 0 0 1 0 0 0 0 0 0 1 0 1])
+  ("input_thread" .
+   [3 0 0 0 0 0 0 0 0 1 0 0])
+  ("get_local_identity" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("close" .
+   [4 0 0 0 0])
+  ("ssl_socket" .
+   [3 0 0 0 0 0 2 1 1 0])
+  ("teardown" .
+   [4 0 0 0 1 0 0 0])
+  ("KeyboardInterrupt" .
+   [0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("logger" .
+   [9 0 0 0 0 0])
+  ("like" .
+   [1 0 0 0])
+  ("here" .
+   [1 0 0 0])
+  ("There" .
+   [1 0 0 0 0])
+  ("The" .
+   [1 0 0])
+  ("months" .
+   [2 0 0 0 0 0])
+  ("are" .
+   [1 0 0])
+  ("Here" .
+   [1 0 0 0])
+  ("days" .
+   [2 0 0 0])
+  ("We" .
+   [2 0])
+  ("it" .
+   [1 0])
+  ("some" .
+   [1 0 0 0])
+  ("string" .
+   [1 0 0 1 0 0])
+  ("interpreter-mode-alist" .
+   [0 0 0 0 0 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("org-indent-mode" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("gnus-visible-headers" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("message" .
+   [5 0 0 0 0 0 1])
+  ("user-full-name" .
+   [0 0 0 0 0 0 0 0 0 2 0 0 0 0])
+  ("user-mail-address" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0])
+  ("crosshairs-mode" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("crosshairs" .
+   [0 0 0 0 0 1 0 0 0 0])
+  ("examination__queue__queue_type" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("queue" .
+   [1 0 0 0 0])
+  ("valid" .
+   [1 0 0 0 0])
+  ("validity_multiplier" .
+   [0 0 0 0 0 0 4 0 2 0 0 0 0 0 0 0 0 0 0])
+  ("years_of_validity" .
+   [0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("IndexError" .
+   [0 0 0 0 0 1 0 0 0 0])
+  ("Non" .
+   [1 0 0])
+  ("examination" .
+   [4 0 0 0 0 0 0 0 0 0 0])
+  ("visa_only" .
+   [1 0 0 0 0 0 0 0 0])
+  ("STAMP_COORDS" .
+   [1 0 0 0 1 0 0 0 0 0 0 0])
+  ("31" .
+   [1 0])
+  ("patient_sig" .
+   [3 0 0 0 3 0 0 0 0 0 1])
+  ("32" .
+   [3 0])
+  ("30" .
+   [3 0])
+  ("dark" .
+   [1 0 0 0])
+  ("darkblue" .
+   [1 0 0 0 0 0 0 0])
+  ("Color" .
+   [1 0 0 0 0])
+  ("16" .
+   [1 0])
+  ("28" .
+   [2 0])
+  ("15" .
+   [1 0])
+  ("12" .
+   [5 0])
+  ("25" .
+   [2 0])
+  ("26" .
+   [6 0])
+  ("host_state_failed" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("host_state_passed" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("additional_test_failed" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("add" .
+   [1 0 0])
+  ("additional_test_passed" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("mandatory_failed" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("UNFIT_TEMPORARILY_COORDS" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("unfit_temporarily" .
+   [0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("UNFIT_FOR_DUTY_COORDS" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("unfit_for_sea_duty" .
+   [0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("FIT_WITH_RESTRICTION_COORDS" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("fit_with_restriction" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("FIT_FOR_DUTY_COORDS" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("fit_for_sea_duty" .
+   [0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("F_HOST_STATE_COORDS" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("P_HOST_STATE_COORDS" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("F_ADDITIONAL_TEST_COORDS" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("P_ADDITIONAL_TEST_COORDS" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("F_MANDATORY_MED_COORDS" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("get_marked_tickbox" .
+   [0 0 0 0 0 1 0 1 6 0 0 1 0 1 0 0 0 0])
+  ("concept__name" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("queryset" .
+   [3 0 0 0 0 0 0 1])
+  ("value" .
+   [2 0 0 0 0])
+  ("tags" .
+   [3 0 0 0])
+  ("an" .
+   [1 0])
+  ("concept" .
+   [3 0 0 0 0 0 0])
+  ("width" .
+   [1 0 0 0 0])
+  ("10" .
+   [1 0])
+  ("style" .
+   [1 0 0 0 0])
+  ("text" .
+   [1 0 0 0])
+  ("top" .
+   [2 0 0])
+  ("cm" .
+   [5 0])
+  ("left" .
+   [2 0 0 0])
+  ("Label" .
+   [4 0 0 0 0])
+  ("coords" .
+   [3 0 0 0 0 0])
+  ("get" .
+   [1 0 0])
+  ("processing_results" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("mandatory_passed" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("xmarks" .
+   [1 0 0 0 0 0])
+  ("P_MANDATORY_MED_COORDS" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("_mark_checkbox" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0])
+  ("self" .
+   [28 0 0 0])
+  ("mark_processing_results" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("ns-toggle-fullscreen" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("f1" .
+   [1 0])
+  ("global-set-key" .
+   [1 0 0 0 0 0 0 0 0 0 0 1 0 0])
+  ("zenburn-bg+3" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("zenburn-fg" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("zenburn-magenta" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("zenburn-blue" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("zenburn-yellow" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("zenburn-green" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("zenburn-red" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("zenburn-bg" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("ansi-term-color-vector" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("zenburn-blue+1" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0])
+  ("teeth_speech_remarks" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("family_details_concepts" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2])
+  ("is" .
+   [1 0])
+  ("family_details" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("org-shiftmetaright" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("org-shiftmetaleft" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("org-metaright" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("org-metaleft" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("outline-demote" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0])
+  ("outline-promote" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("kbd" .
+   [6 0 0])
+  ("local-set-key" .
+   [3 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("lambda" .
+   [2 0 0 0 0 0])
+  ("org-mode-hook" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0])
+  ("call-interactively" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("default-directory" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("let" .
+   [1 0 0])
+  ("project-term" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("ANDROID_SDK_HOME" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("~/Development/Libraries/android-sdk-macosx/" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("set-scroll-bar-mode" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("audiometry" .
+   [0 0 0 0 0 0 0 0 0 1])
+  ("is_pe_findings_underlines" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("past_medical_history" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("is_past_med_underlines" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("ancillary_results" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("get_patient_details" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("org-use-fast-todo-selection" .
    [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
   ("org-use-fast-tag-selection" .
    [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
@@ -9,11 +365,11 @@
   ("EMACS" .
    [1 0 0 0 0])
   ("export" .
-   [4 0 0 0 0 0])
+   [5 0 0 0 0 0])
   ("remote-term" .
    [1 0 0 0 0 0 0 0 0 0 0])
   ("interactive" .
-   [1 0 0 0 0 0 0 0 0 0 1])
+   [2 0 0 0 0 0 0 0 0 0 1])
   ("kill-emacs-hook" .
    [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
   ("save-persistent-scratch" .
@@ -31,7 +387,7 @@
   ("delete-region" .
    [1 0 0 0 0 0 0 0 0 0 0 0 0])
   ("first" .
-   [1 0 0 0 0])
+   [2 0 0 0 0])
   ("clear" .
    [1 0 0 0 0])
   ("buffer" .
@@ -63,7 +419,7 @@
   ("PERSISTENT-SCRATCH-BACKUP-DIR" .
    [0 0 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
   ("name" .
-   [1 0 0 0])
+   [6 0 0 0])
   ("*scratch*" .
    [3 0 0 0 0 0 0 0 1])
   ("current-time-string" .
@@ -83,13 +439,13 @@
   ("backup" .
    [2 0 0 0 0 0])
   ("filename" .
-   [1 0 0 0 0 0 0 0])
+   [4 0 0 0 0 0 0 0])
   ("file" .
    [2 0 0 0])
   ("Create" .
    [1 0 0 0 0 0])
   ("defun" .
-   [2 0 0 0 4])
+   [3 0 0 0 4])
   ("persistent-scratch." .
    [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
   ("persistent" .
@@ -97,7 +453,7 @@
   ("defvar" .
    [1 0 0 0 0 1])
   ("info" .
-   [1 0 0 0])
+   [9 0 0 0])
   ("in" .
    [3 0])
   ("1000" .
@@ -121,13 +477,13 @@
   ("latest_poll_list" .
    [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
   ("nil" .
-   [20 0 0])
+   [24 0 0])
   ("mumamo-background-colors" .
    [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
   ("django-html-mumamo-mode" .
    [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1])
   ("append" .
-   [1 0 0 0 0 0])
+   [2 0 0 0 0 0])
   ("auto-mode-alist" .
    [0 0 0 0 0 0 0 0 0 1 0 0 0 0 2])
   ("mf-display-padding-height" .
@@ -143,7 +499,7 @@
   ("flymake" .
    [0 0 0 0 0 0 1])
   ("setq" .
-   [22 0 0 1])
+   [26 0 0 1])
   ("cua-mode" .
    [0 0 0 0 0 0 0 1])
   ("menu" .
@@ -155,17 +511,17 @@
   ("get_coach_data" .
    [1 0 0 0 0 0 0 0 0 0 0 0 0 1])
   ("the" .
-   [6 0 0])
+   [7 0 0])
   ("maximize-frame" .
    [0 0 0 0 0 1 0 0 0 0 0 0 0 0])
   ("require" .
-   [1 0 0 0 0 0 0])
+   [4 0 0 0 0 0 0])
   ("add-hook" .
-   [0 0 0 1 0 0 0 0])
+   [1 0 0 1 0 0 0 0])
   ("window-setup-hook" .
    [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
   ("load" .
-   [3 0 0 2])
+   [3 0 0 3])
   ("system-type" .
    [1 0 0 0 0 0 0 0 0 1 0])
   ("system-name" .
@@ -179,11 +535,11 @@
   ("exec-path" .
    [0 0 0 0 0 0 0 1 0])
   ("list" .
-   [1 0 0 0])
+   [2 0 0 0])
   ("mf-max-height" .
    [0 0 0 0 0 0 0 0 0 2 1 0 0])
   ("print" .
-   [3 0 0 0 0])
+   [3 0 0 3 1])
   ("mf-max-rows" .
    [0 0 0 0 0 0 0 0 0 0 1])
   ("900" .
@@ -215,7 +571,7 @@
   ("make-term" .
    [2 0 0 0 0 0 0 0 0])
   ("project-dir" .
-   [4 0 0 0 0 0 0 0 0 0 3])
+   [5 0 0 0 0 0 0 0 0 0 3])
   ("set-buffer" .
    [1 0 0 0 0 0 0 0 0 0])
   ("term-mode" .
@@ -231,7 +587,7 @@
   ("project" .
    [1 0 0 0 0 0 0])
   ("open-project-term" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+   [0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0])
   (".proj:term" .
    [1 0 0 0 0 0 0 0 0 0])
   ("cd" .
@@ -257,4 +613,194 @@
   ("HOLD" .
    [2 0 0 0])
   ("org-directory" .
-   [0 0 0 0 0 0 0 0 1 0 0 0 0])))
+   [0 0 0 0 0 0 0 0 1 0 0 0 0])
+  (">=" .
+   [1 0])
+  ("11" .
+   [1 0])
+  ("_get_concept_value" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("spirometry_coords" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("ancillary_result_coords" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3])
+  ("get_ancillary_examinations" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2])
+  ("get_physical_exam" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3])
+  ("physical_exam_concepts" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("ns-toggle-fullscreen-internal" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("wombat" .
+   [1 0 0 0 0 0])
+  ("peme_id" .
+   [1 0 0 0 0 0 0])
+  ("boilerplate" .
+   [0 0 0 0 0 0 0 1 0 0 0])
+  ("doctor" .
+   [3 0 0 0 0 1])
+  ("stamp" .
+   [2 0 0 0 0])
+  ("csr_form_number" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("calculate_age" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("canvas" .
+   [10 0 0 0 0 0])
+  ("return_canvas" .
+   [0 0 0 0 0 0 0 0 0 0 2 0 0])
+  ("can" .
+   [1 0 0])
+  ("report" .
+   [2 0 0 0 0 0])
+  ("apply_signature" .
+   [0 0 0 0 0 0 0 0 0 2 0 0 0 0 0])
+  ("reportlab" .
+   [1 0 0 0 0 0 0 0 0])
+  ("drawImage" .
+   [2 0 0 0 0 0 0 0 0])
+  ("os" .
+   [4 0])
+  ("path" .
+   [4 0 0 0])
+  ("join" .
+   [10 0 0 0])
+  ("cur_dir" .
+   [2 0 0 0 1 1 0])
+  ("SIG_COORDS" .
+   [0 0 0 1 0 0 1 0 0 0])
+  ("generate_by" .
+   [1 0 0 0 0 0 0 0 0 0 1])
+  ("PDFGenerator" .
+   [0 0 0 0 0 0 1 0 0 0 0 0])
+  ("Image" .
+   [3 0 0 0 0])
+  ("ido-ubiquitous" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("ido-ubiquitous-mode" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("ido-better-flex/disable" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("ido-better-flex/enable" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("other-frame" .
+   [0 0 0 0 0 1 0 0 0 0 0])
+  ("endp" .
+   [0 0 0 3])
+  ("end" .
+   [1 0 0])
+  ("blah" .
+   [1 0 0 0])
+  ("blah>" .
+   [1 0 0 0 0])
+  ("starttls-use-gnutls" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("message-send-mail-function" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("smtpmail-send-it" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("587" .
+   [1 0 0])
+  ("smtpmail" .
+   [1 0 0 0 0 0 0 0])
+  ("solarized-light" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 1 0 0])
+  ("zenburn" .
+   [1 0 0 0 0 0 0])
+  ("later" .
+   [1 0 0 0 0])
+  ("ignore" .
+   [2 0 0 0 0 0])
+  ("py" .
+   [1 0])
+  ("Project" .
+   [0 0 0 1 0 0 0])
+  ("ffip" .
+   [1 0 0 0])
+  ("DB_HOME" .
+   [1 0 0 0 0 0 0])
+  ("PG_LOG_FILE" .
+   [0 0 0 0 1 0 0 0 0 0 0])
+  ("temporary-file-directory" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 0 0 0 0 0 0])
+  ("auto-save-file-name-transforms" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("t" .
+   [1])
+  ("flymake-create-temp-intemp" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("electric-pair-mode" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("socket" .
+   [1 0 0 0 0 0])
+  ("connection_ready" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("SSL" .
+   [1 0 0])
+  ("__init__" .
+   [0 0 0 0 0 1 0 0])
+  ("io_loop" .
+   [3 0 0 1 0 0 0])
+  ("PORT" .
+   [2 0 0 0])
+  ("10044" .
+   [1 0 0 0 0])
+  ("SSLSocketServer" .
+   [0 0 0 0 0 2 0 0 0 0 0 0 0 0 0])
+  ("api" .
+   [1 0 0])
+  ("api_server" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("CollectorApi" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("httpserver" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("ioloop" .
+   [2 0 0 0 0 0])
+  ("IOLoop" .
+   [0 0 0 1 0 0])
+  ("instance" .
+   [1 0 0 0 0 0 0 0])
+  ("https_server" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("listen" .
+   [1 0 0 0 0 0])
+  ("8080" .
+   [1 0 0 0])
+  ("_get_collector_logger" .
+   [0 0 0 0 0 0 0 0 1 2 0 0 0 0 0 0 0 0 0 0 0])
+  ("_get_agent_logger" .
+   [0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0])
+  ("agent_name" .
+   [1 0 0 0 0 0 0 1 0 0])
+  ("subscriptions" .
+   [4 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("mobileclient_set" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("values_list" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("flat" .
+   [1 0 0 0])
+  ("agent_id" .
+   [1 0 0 0 0 0 0 0])
+  ("subscribers" .
+   [6 0 0 0 0 0 0 0 0 0 0])
+  ("state" .
+   [1 0 0 0 0])
+  ("State" .
+   [1 0 0 0 0])
+  ("INCOMING" .
+   [0 0 0 0 0 1 0 0])
+  ("subscriber" .
+   [5 0 0 0 0 0 0 0 0 0])
+  ("Subscriber" .
+   [4 0 0 0 1 0 0 0 0 0])
+  ("query" .
+   [1 0 0 0 0])
+  ("gcm_id" .
+   [6 0 0 0 0 0])
+  ("one" .
+   [1 0 0])
+  ("NoResultFound" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0])))
