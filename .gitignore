@@ -7,9 +7,21 @@ emacs/.emacs.d/remote-hosts.el
 emacs/auto-save-list
 emacs/%*
 *.elc
+*.dat
 *~
+.elscreen
+*.lock
+.newsrc-dribble
+bookmarks
+lastdir
+history
+archive-contents
+url/
+tmp/
 
 *.pyc
 /emacs/.emacs.d/.org-id-locations
 /emacs/.emacs.d/elpa/typing-1.1.4/typing-pkg.el
 /emacs/.emacs.d/elpa/typing-1.1.4/typing.el
+
+*.orig
