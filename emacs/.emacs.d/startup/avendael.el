@@ -10,6 +10,14 @@ print a message in the minibuffer with the result."
 	(setq count (1+ count)))
       (message "Buffer contains %d words." count))))
 
+(defun toggle-transparency ()
+  (interactive)
+  (if (/=
+       (cadr (frame-parameter nil 'alpha))
+       100)
+      (set-frame-parameter nil 'alpha '(100 100))
+    (set-frame-parameter nil 'alpha '(90 90))))
+
 (defun avendael-join-next-line ()
   "Join the next line with the current line."
   (interactive)
@@ -49,6 +57,13 @@ print a message in the minibuffer with the result."
         (untabify (1- (point)) (point-max))))
   nil)
 
+(defun shell-pwd ()
+  "Opens a shell with the name of the pwd as a prefix to the buffer name."
+  (interactive)
+  (let ((splitdir (split-string default-directory "/" t)))
+    (if (or (equal (length splitdir) 0) (equal splitdir nil))
+        (shell "*rootdir:shell*")
+      (shell (concat "*" (car (last splitdir)) ":shell*")))))
 
 (defun open-remote-term (new-buffer-name cmd &rest switches)
   "Open a remote terminal with the specified arguments.
@@ -117,7 +132,25 @@ project-dir: The project root directory"
 (global-set-key (kbd "C-M-<f11>") 'ns-toggle-fullscreen)
 (global-set-key (kbd "C-c C-M-S-c") 'crosshairs)
 (global-set-key (kbd "C-x M-f") 'ffip)
+(global-set-key (kbd "C-x SPC") 'just-one-space)
+(global-set-key (kbd "C-x ?") help-map)
+(local-set-key (kbd "C-h") 'backward-delete-char-untabify)
+;(global-set-key (kbd "M-[") 'backward-paragraph)
+;(global-set-key (kbd "M-]") 'forward-paragraph)
+;(define-key compilation-shell-minor-mode-map (kbd "M-{") 'elscreen-previous)
+;(define-key compilation-shell-minor-mode-map (kbd "M-}") 'elscreen-next)
+;(define-key compilation-shell-minor-mode-map (kbd "C-c M-{") 'compilation-previous-file)
+;(define-key compilation-shell-minor-mode-map (kbd "C-c M-}") 'compilation-next-file)
 
 ;;-- Additional frame bindings --;;
 (global-set-key (kbd "C-x 5 n") 'ns-next-frame)
 (global-set-key (kbd "C-x 5 p") 'ns-prev-frame)
+(global-set-key (kbd "s-{") 'elscreen-previous)
+(global-set-key (kbd "s-}") 'elscreen-next)
+
+;; Osx style bindings
+(global-set-key (kbd "<s-left>") 'move-beginning-of-line)
+(global-set-key (kbd "<s-right>") 'move-end-of-line)
+(global-set-key (kbd "<s-up>") 'cua-scroll-down)
+(global-set-key (kbd "<s-down>") 'cua-scroll-up)
+(global-set-key (kbd "<C-s-f") 'maximize-frame)
