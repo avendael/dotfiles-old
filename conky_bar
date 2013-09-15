@@ -1,0 +1,17 @@
+gap_y -1000
+
+background no
+double_buffer yes
+out_to_console yes
+own_window yes
+own_window_type desktop
+update_interval 1.0
+font -*-terminus-*-*-*-*-12-*-*-*-*-*-iso8859-*
+
+TEXT
+^i(.dzen/bitmaps/sm4tik/cpu.xbm) ${cpu cpu0}% \
+^i(.dzen/bitmaps/sm4tik/cpu.xbm) ${cpu cpu1}% \
+^i(.dzen/bitmaps/sm4tik/mem.xbm) $memperc% \
+^i(.dzen/bitmaps/sm4tik/ac_01.xbm) ${battery_short BAT1} \
+^i(.dzen/bitmaps/sm4tik/arch.xbm) ${entropy_avail}/${entropy_poolsize} \
+^i(.dzen/bitmaps/sm4tik/clock.xbm) ${time %b %e %H:%M:%S}
