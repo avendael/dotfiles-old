@@ -68,11 +68,17 @@
 ;; Fix OSX paths and bindings
 (when (equal system-type 'darwin)
   (load "~/.emacs.d/startup/osx-path")
-  ;(setq mac-option-key-is-meta nil)
-  ;(setq mac-command-key-is-meta t)
-  ;(setq mac-command-modifier 'meta)
-  ;(setq mac-option-modifier 'super)
+;  (setq mac-option-key-is-meta nil)
+;  (setq mac-command-key-is-meta t)
+;  (setq mac-command-modifier 'meta)
+;  (setq mac-option-modifier 'super)
 )
+
+(setq locale-coding-system 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(set-selection-coding-system 'utf-8)
+(prefer-coding-system 'utf-8)
 
 ;;-- ELPA --;;
 (require 'package)
@@ -84,7 +90,7 @@
 (add-to-list 'custom-safe-themes
              "cead5b757549e6272f7ffebbb87e190dc2b4036e4d035ba2eefdc41a23ba11a9"
              "628278136f88aa1a151bb2d6c8a86bf2b7631fbea5f0f76cba2a0079cd910f7d")
-(load-theme 'sanityinc-tomorrow-eighties t)
+(load-theme 'zenburn t)
 
 ;;-- Expand Region --;;
 (require 'expand-region)
@@ -135,12 +141,11 @@
 (init-customization "pony")
 (init-customization "flymake-cursor")
 (init-customization "org")
+(init-customization "wrap-region")
 (init-customization "avendael")
 
 (elscreen-start)
 (elscreen-restore)
-
-(setq ctags-path "/usr/local/Cellar/ctags/5.8/bin/ctags")
 
 (defun create-tags (dir-name)
   "Create a tag file for the specified project directory. This function
@@ -167,5 +172,7 @@ uses ctags instead of etags."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ansi-color-faces-vector [default bold shadow italic underline bold bold-italic bold])
+ '(custom-safe-themes (quote ("124e34f6ea0bc8a50d3769b9f251f99947d6b4d9422c6d85dc4bcc9c2e51b39c" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "628278136f88aa1a151bb2d6c8a86bf2b7631fbea5f0f76cba2a0079cd910f7d" "d2622a2a2966905a5237b54f35996ca6fda2f79a9253d44793cfe31079e3c92b" "501caa208affa1145ccbb4b74b6cd66c3091e41c5bb66c677feda9def5eab19c" default "cead5b757549e6272f7ffebbb87e190dc2b4036e4d035ba2eefdc41a23ba11a9")))
  '(virtualenv-root "~/Development/Libraries/python-venv/"))
 (put 'dired-find-alternate-file 'disabled nil)

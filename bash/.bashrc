@@ -1,3 +1,7 @@
+if [[ $TERM == dumb ]]; then
+    export NODE_NO_READLINE=1
+fi
+
 if [[ $OSTYPE == darwin* ]]; then
     export EC2_HOME=~/.ec2
     export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
@@ -30,4 +34,4 @@ if [[ $OSTYPE == darwin* ]]; then
     fi
 fi
 
-export PS1="\[\e[0;34m\][\u@\h \[\e[0;32m\]\W\[\e[0;34m\]]\$(__git_ps1) \[\e[0;33m\]\$\[\e[0m\] "
+#export PS1="\[\e[0;34m\][\u@\h \[\e[0;32m\]\W\[\e[0;34m\]]\$(__git_ps1) \[\e[0;33m\]\$\[\e[0m\] "

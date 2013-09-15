@@ -4,7 +4,7 @@
 (ido-mode)
 (setq ido-enable-flex-matching t
       ido-everywhere t)
-(ido-ubiquitous-disable-in man)
+;(ido-ubiquitous-disable-in man)
 (ido-ubiquitous-mode)
 
 ;;-- SMEX --;;

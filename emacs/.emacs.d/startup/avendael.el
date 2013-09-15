@@ -13,8 +13,7 @@ print a message in the minibuffer with the result."
 (defun toggle-transparency ()
   (interactive)
   (if (/=
-       (cadr (frame-parameter nil 'alpha))
-       100)
+       (cadr (frame-parameter nil 'alpha)) 100)
       (set-frame-parameter nil 'alpha '(100 100))
     (set-frame-parameter nil 'alpha '(90 90))))
 
@@ -135,12 +134,12 @@ project-dir: The project root directory"
 (global-set-key (kbd "C-x SPC") 'just-one-space)
 (global-set-key (kbd "C-x ?") help-map)
 (local-set-key (kbd "C-h") 'backward-delete-char-untabify)
-;(global-set-key (kbd "M-[") 'backward-paragraph)
-;(global-set-key (kbd "M-]") 'forward-paragraph)
-;(define-key compilation-shell-minor-mode-map (kbd "M-{") 'elscreen-previous)
-;(define-key compilation-shell-minor-mode-map (kbd "M-}") 'elscreen-next)
-;(define-key compilation-shell-minor-mode-map (kbd "C-c M-{") 'compilation-previous-file)
-;(define-key compilation-shell-minor-mode-map (kbd "C-c M-}") 'compilation-next-file)
+(global-set-key (kbd "M-[") 'backward-paragraph)
+(global-set-key (kbd "M-]") 'forward-paragraph)
+(define-key compilation-shell-minor-mode-map (kbd "M-{") 'elscreen-previous)
+(define-key compilation-shell-minor-mode-map (kbd "M-}") 'elscreen-next)
+(define-key compilation-shell-minor-mode-map (kbd "C-c M-{") 'compilation-previous-file)
+(define-key compilation-shell-minor-mode-map (kbd "C-c M-}") 'compilation-next-file)
 
 ;;-- Additional frame bindings --;;
 (global-set-key (kbd "C-x 5 n") 'ns-next-frame)
@@ -153,4 +152,4 @@ project-dir: The project root directory"
 (global-set-key (kbd "<s-right>") 'move-end-of-line)
 (global-set-key (kbd "<s-up>") 'cua-scroll-down)
 (global-set-key (kbd "<s-down>") 'cua-scroll-up)
-(global-set-key (kbd "<C-s-f") 'maximize-frame)
+(global-set-key (kbd "<C-s-f>") 'maximize-frame)
