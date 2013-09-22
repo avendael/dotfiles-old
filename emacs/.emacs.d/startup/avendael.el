@@ -153,3 +153,8 @@ project-dir: The project root directory"
 (global-set-key (kbd "<s-up>") 'cua-scroll-down)
 (global-set-key (kbd "<s-down>") 'cua-scroll-up)
 (global-set-key (kbd "<C-s-f>") 'maximize-frame)
+
+(set-frame-parameter nil 'alpha '(90 90))
+
+(add-hook 'prog-mode-hook 'linum-mode)
+(add-hook 'prog-mode-hook 'diff-hl-mode)
