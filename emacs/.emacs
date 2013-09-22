@@ -106,7 +106,7 @@
              js2-refactor dash magit git-rebase-mode git-commit-mode mark-multiple markdown-mode maxframe
              minimap multiple-cursors nose pony-mode popup s shimbun skewer-mode simple-httpd smex
              solarized-theme typing unbound undo-tree virtualenv vline w3m yasnippet zenburn-theme
-             powerline))
+             powerline unicode-fonts json-mode))
 
 (add-to-list 'custom-safe-themes
              "cead5b757549e6272f7ffebbb87e190dc2b4036e4d035ba2eefdc41a23ba11a9"
@@ -166,6 +166,7 @@
 (init-customization "avendael")
 (init-customization "powerline")
 (init-customization "magit")
+(init-customization "js")
 
 (elscreen-start)
 (elscreen-restore)

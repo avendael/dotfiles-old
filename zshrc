@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="xiong-chiamiov-plus"
+ZSH_THEME="avendael"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -62,7 +62,7 @@ bindkey '^S' history-incremental-search-forward
 bindkey '^P' history-search-backward
 bindkey '^N' history-search-forward
 
-if [ -n "$INSIDE_EMACS" ]; then
+if [[ -n "$INSIDE_EMACS" && "$TERM" != "dumb" ]]; then
     chpwd() { print -P "\033AnSiTc %d" }
     print -P "\033AnSiTu %n"
     print -P "\033AnSiTc %d"

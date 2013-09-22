@@ -6,6 +6,7 @@ emacs/.emacs.d/persistent-scratch
 emacs/.emacs.d/remote-hosts.el
 emacs/auto-save-list
 emacs/%*
+pcache
 *.elc
 *.dat
 *~

@@ -17,11 +17,22 @@
              (local-set-key "\C-cl" 'js-load-file-and-go)))
 
 (add-to-list 'auto-mode-alist (cons (rx ".js" eos) 'js2-mode))
--(setq-default js2-global-externs
+(setq-default js2-global-externs
               '("module" "require" "buster" "sinon" "assert" "refute" "setTimeout"
                 "clearTimeout" "setInterval" "clearInterval" "location" "__dirname" "console" "JSON"))
 
 (setq-default js2-idle-timer-delay 0.1)
+
+;; js2-mode steals TAB, let's steal it back for yasnippet
+(defun js2-tab-properly ()
+  (interactive)
+  (let ((yas-fallback-behavior 'return-nil))
+    (unless (yas-expand)
+      (indent-for-tab-command)
+      (if (looking-back "^\s*")
+          (back-to-indentation)))))
+
+(define-key js2-mode-map (kbd "TAB") 'js2-tab-properly)
 
 ;; Use skewer for frontend js, and use node for backend js. Just disable skewer to enable shadowed bindings.
 (add-hook 'js2-mode-hook 'skewer-mode)
