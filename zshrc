@@ -67,3 +67,5 @@ if [[ -n "$INSIDE_EMACS" && "$TERM" != "dumb" ]]; then
     print -P "\033AnSiTu %n"
     print -P "\033AnSiTc %d"
 fi
+
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
