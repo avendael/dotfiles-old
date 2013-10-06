@@ -18,8 +18,9 @@
 
 (add-to-list 'auto-mode-alist (cons (rx ".js" eos) 'js2-mode))
 (setq-default js2-global-externs
-              '("module" "require" "buster" "sinon" "assert" "refute" "setTimeout"
-                "clearTimeout" "setInterval" "clearInterval" "location" "__dirname" "console" "JSON"))
+              '("clearTimeout" "setInterval" "clearInterval" "location" "__dirname"
+                "console" "JSON" "module" "require" "buster" "sinon" "assert" "refute"
+                "setTimeout" "angular"))
 
 (setq-default js2-idle-timer-delay 0.1)
 

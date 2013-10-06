@@ -128,6 +128,7 @@ project-dir: The project root directory"
   (list project-dir))
 
 ;; Remapped keys
+(pglobal-set-key (kbd "M-/") 'hippie-expand)
 (global-set-key (kbd "C-M-<f11>") 'ns-toggle-fullscreen)
 (global-set-key (kbd "C-c C-M-S-c") 'crosshairs)
 (global-set-key (kbd "C-x M-f") 'ffip)
@@ -148,13 +149,19 @@ project-dir: The project root directory"
 (global-set-key (kbd "s-}") 'elscreen-next)
 
 ;; Osx style bindings
+(global-set-key (kbd "s-v") 'yank)
+(global-set-key (kbd "s-c") 'kill-ring-save)
+(global-set-key (kbd "s-x") 'kill-region)
+(global-set-key (kbd "s-z") 'undo-tree-undo)
+(global-set-key (kbd "s-Z") 'undo-tree-redo)
 (global-set-key (kbd "<s-left>") 'move-beginning-of-line)
 (global-set-key (kbd "<s-right>") 'move-end-of-line)
-(global-set-key (kbd "<s-up>") 'cua-scroll-down)
-(global-set-key (kbd "<s-down>") 'cua-scroll-up)
+(global-set-key (kbd "<s-up>") 'scroll-down-command)
+(global-set-key (kbd "<s-down>") 'scroll-up-command)
 (global-set-key (kbd "<C-s-f>") 'maximize-frame)
 
 (set-frame-parameter nil 'alpha '(90 90))
 
 (add-hook 'prog-mode-hook 'linum-mode)
 (add-hook 'prog-mode-hook 'diff-hl-mode)
+(add-hook 'prog-mode-hook 'wrap-region-mode)
