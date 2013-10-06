@@ -1,0 +1,14 @@
+map <c-n> scrollDown
+map <c-p> scrollUp
+map <c-b> scrollLeft
+map <c-f> scrollRight
+map <c-v> scrollFullPageDown
+map <a-v> scrollFullPageUp
+map <c-w> copyCurrentUrl
+map <a-w> copyCurrentUrl
+map <c-k> copyCurrentUrl
+map <c-s> enterFindMode
+map <c-x>b Vomnibar.activateTabSelection
+map <c-x>0 removeTab
+map <a-<> scrollToTop
+map <a->> scrollToBottom
