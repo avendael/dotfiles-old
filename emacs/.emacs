@@ -72,7 +72,10 @@
 ;  (setq mac-command-key-is-meta t)
 ;  (setq mac-command-modifier 'meta)
 ;  (setq mac-option-modifier 'super)
-)
+  (setq mac-option-key-is-meta t)
+  (setq mac-command-key-is-meta nil)
+  (setq mac-command-modifier 'super)
+  (setq mac-option-modifier 'meta))
 
 (prefer-coding-system 'utf-8)
 (set-default-coding-systems 'utf-8)
@@ -126,10 +129,6 @@
 ; Workaround for ssh config ControlMaster auto and ControlPersist yes
 (setq tramp-default-method "scpx")
 
-;;-- CUA Mode --;;
-(cua-mode t)
-(setq cua-enable-cua-keys nil)
-
 ;; Windmove
 (windmove-default-keybindings)
 
@@ -167,6 +166,7 @@
 (init-customization "powerline")
 (init-customization "magit")
 (init-customization "js")
+;(init-customization "evil")
 
 (elscreen-start)
 (elscreen-restore)
@@ -190,7 +190,14 @@ uses ctags instead of etags."
  '(elscreen-tab-background-face ((t (:background "gray30"))))
  '(elscreen-tab-control-face ((t (:background "bisque4" :foreground "gray80" :underline t))))
  '(elscreen-tab-current-screen-face ((t (:background "dark slate blue" :foreground "gray80"))))
- '(elscreen-tab-other-screen-face ((t (:background "bisque4" :foreground "gray80" :underline t)))))
+ '(elscreen-tab-other-screen-face ((t (:background "bisque4" :foreground "gray80" :underline t))))
+ '(w3m-anchor ((t (:foreground "SkyBlue3"))))
+ '(w3m-arrived-anchor ((t (:foreground "MediumPurple2"))))
+ '(w3m-form ((t (:foreground "tomato4" :underline t))))
+ '(w3m-header-line-location-title ((t (:background "Gray20" :foreground "DarkSlateGray3"))))
+ '(w3m-image-anchor ((t (:background "ghost white"))))
+ '(w3m-tab-selected-retrieving ((t (:background "Gray90" :foreground "PaleVioletRed3" :box (:line-width -1 :style released-button)))))
+ '(w3m-tab-unselected-retrieving ((t (:background "Gray70" :foreground "coral4" :box (:line-width -1 :style released-button))))))
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -198,7 +205,6 @@ uses ctags instead of etags."
  ;; If there is more than one, they won't work right.
  '(ansi-color-faces-vector [default bold shadow italic underline bold bold-italic bold])
  '(column-number-mode t)
- '(cua-mode t nil (cua-base))
  '(current-language-environment "UTF-8")
  '(custom-safe-themes (quote ("06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "c5207e7b8cc960e08818b95c4b9a0c870d91db3eaf5959dd4eba09098b7f232b" "124e34f6ea0bc8a50d3769b9f251f99947d6b4d9422c6d85dc4bcc9c2e51b39c" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "628278136f88aa1a151bb2d6c8a86bf2b7631fbea5f0f76cba2a0079cd910f7d" "d2622a2a2966905a5237b54f35996ca6fda2f79a9253d44793cfe31079e3c92b" "501caa208affa1145ccbb4b74b6cd66c3091e41c5bb66c677feda9def5eab19c" default "cead5b757549e6272f7ffebbb87e190dc2b4036e4d035ba2eefdc41a23ba11a9")))
  '(show-paren-mode t)
@@ -206,5 +212,3 @@ uses ctags instead of etags."
  '(tool-bar-mode nil)
  '(virtualenv-root "~/Development/Libraries/python-venv/"))
 (put 'dired-find-alternate-file 'disabled nil)
-(require 'unicode-fonts)
-(unicode-fonts-setup)
