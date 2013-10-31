@@ -103,13 +103,14 @@
        (if (y-or-n-p (format "Package %s is missing. Install it? " package))
            (package-install package))))
  ;; The list of packages that should be installed
- '(yaml-mode wrap-region autopair color-theme-sanityinc-tomorrow creole-mode crosshairs col-highlight
-             elpy auto-complete ac-js2 elscreen expand-region find-file-in-project flymake flymake-cursor
-             fuzzy gitignore-mode highlight-indentation hl-line+ ido-ubiquitous idomenu iedit js2-mode
-             js2-refactor dash magit git-rebase-mode git-commit-mode mark-multiple markdown-mode maxframe
-             minimap multiple-cursors nose pony-mode popup s shimbun skewer-mode simple-httpd smex
-             solarized-theme typing unbound undo-tree virtualenv vline w3m yasnippet zenburn-theme
-             powerline unicode-fonts json-mode))
+ '(yaml-mode wrap-region autopair color-theme-sanityinc-tomorrow creole-mode crosshairs
+             col-highlight elpy auto-complete ac-js2 elscreen expand-region gist
+             find-file-in-project flymake flymake-cursor fuzzy gitignore-mode
+             highlight-indentation hl-line+ ido-ubiquitous idomenu iedit js2-mode
+             js2-refactor dash magit git-rebase-mode git-commit-mode mark-multiple markdown-mode
+             maxframe minimap multiple-cursors nose pony-mode popup s shimbun skewer-mode
+             simple-httpd smex solarized-theme typing unbound undo-tree virtualenv vline w3m
+             yasnippet zenburn-theme powerline unicode-fonts json-mode feature-mode web-mode))
 
 (add-to-list 'custom-safe-themes
              "cead5b757549e6272f7ffebbb87e190dc2b4036e4d035ba2eefdc41a23ba11a9"
@@ -128,9 +129,6 @@
 ;;-- Tramp --;;
 ; Workaround for ssh config ControlMaster auto and ControlPersist yes
 (setq tramp-default-method "scpx")
-
-;; Windmove
-(windmove-default-keybindings)
 
 ;; Winner Mode
 (winner-mode)

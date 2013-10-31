@@ -128,7 +128,9 @@ project-dir: The project root directory"
   (list project-dir))
 
 ;; Remapped keys
-(pglobal-set-key (kbd "M-/") 'hippie-expand)
+(global-set-key (kbd "M-/") 'hippie-expand)
+(global-set-key (kbd "s-m") 'point-to-register)
+(global-set-key (kbd "s-j") 'jump-to-register)
 (global-set-key (kbd "C-M-<f11>") 'ns-toggle-fullscreen)
 (global-set-key (kbd "C-c C-M-S-c") 'crosshairs)
 (global-set-key (kbd "C-x M-f") 'ffip)
@@ -160,8 +162,18 @@ project-dir: The project root directory"
 (global-set-key (kbd "<s-down>") 'scroll-up-command)
 (global-set-key (kbd "<C-s-f>") 'maximize-frame)
 
+;; Windmove
+(global-set-key (kbd "s-f") 'windmove-right)
+(global-set-key (kbd "s-s") 'windmove-left)
+(global-set-key (kbd "s-e") 'windmove-up)
+(global-set-key (kbd "s-d") 'windmove-down)
+
 (set-frame-parameter nil 'alpha '(90 90))
 
 (add-hook 'prog-mode-hook 'linum-mode)
 (add-hook 'prog-mode-hook 'diff-hl-mode)
 (add-hook 'prog-mode-hook 'wrap-region-mode)
+
+(add-hook 'html-mode-hook 'linum-mode)
+(add-hook 'html-mode-hook 'wrap-region-mode)
+(add-hook 'html-mode-hook 'diff-hl-mode)
