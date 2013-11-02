@@ -68,10 +68,6 @@
 ;; Fix OSX paths and bindings
 (when (equal system-type 'darwin)
   (load "~/.emacs.d/startup/osx-path")
-;  (setq mac-option-key-is-meta nil)
-;  (setq mac-command-key-is-meta t)
-;  (setq mac-command-modifier 'meta)
-;  (setq mac-option-modifier 'super)
   (setq mac-option-key-is-meta t)
   (setq mac-command-key-is-meta nil)
   (setq mac-command-modifier 'super)

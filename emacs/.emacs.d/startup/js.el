@@ -20,7 +20,7 @@
 (setq-default js2-global-externs
               '("clearTimeout" "setInterval" "clearInterval" "location" "__dirname"
                 "console" "JSON" "module" "require" "buster" "sinon" "assert" "refute"
-                "setTimeout" "angular"))
+                "setTimeout" "angular" "exports" "encodeURIComponent"))
 
 (setq-default js2-idle-timer-delay 0.1)
 
