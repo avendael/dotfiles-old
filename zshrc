@@ -51,8 +51,9 @@ export EC2_HOME=~/.ec2
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
 export EDITOR=/usr/local/Cellar/emacs/24.3/bin/emacsclient
 export WORKON_HOME=~/Development/Libraries/python-venv
+export NPM_HOME=/usr/local/Cellar/node/`node --version | tr -d 'v'`/lib/node_modules/npm
 export ANDROID_HOME=~/Development/Libraries/android-sdk-macosx
-export PATH=~/bin:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools:${EC2_HOME}/bin:/usr/local/Cellar/ctags/5.8/bin:/usr/local/bin:/usr/local/sbin:${PATH}
+export PATH=~/bin:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools:${EC2_HOME}/bin:/usr/local/Cellar/ctags/5.8/bin:/usr/local/bin:/usr/local/sbin:${PATH}:${NPM_HOME}/bin
 
 source $EC2_HOME/env.sh
 
