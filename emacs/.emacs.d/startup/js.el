@@ -35,7 +35,13 @@
 
 (define-key js2-mode-map (kbd "TAB") 'js2-tab-properly)
 
+(eval-after-load 'tern
+   '(progn
+      (require 'tern-auto-complete)
+      (tern-ac-setup)))
+
 ;; Use skewer for frontend js, and use node for backend js. Just disable skewer to enable shadowed bindings.
 (add-hook 'js2-mode-hook 'skewer-mode)
+(add-hook 'js2-mode-hook (lambda () (tern-mode t)))
 (add-hook 'css-mode-hook 'skewer-css-mode)
 (add-hook 'html-mode-hook 'skewer-html-mode)

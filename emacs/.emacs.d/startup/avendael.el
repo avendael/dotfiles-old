@@ -168,6 +168,8 @@ project-dir: The project root directory"
 (global-set-key (kbd "s-e") 'windmove-up)
 (global-set-key (kbd "s-d") 'windmove-down)
 
+(global-set-key (kbd "C-;") 'ace-jump-mode)
+
 (set-frame-parameter nil 'alpha '(90 90))
 
 (add-hook 'prog-mode-hook 'linum-mode)
