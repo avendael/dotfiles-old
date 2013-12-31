@@ -147,6 +147,8 @@ project-dir: The project root directory"
 ;;-- Additional frame bindings --;;
 (global-set-key (kbd "C-x 5 n") 'ns-next-frame)
 (global-set-key (kbd "C-x 5 p") 'ns-prev-frame)
+(global-set-key (kbd "C-x 5 /") 'winner-undo)
+(global-set-key (kbd "C-x 5 ?") 'winner-redo)
 (global-set-key (kbd "s-{") 'elscreen-previous)
 (global-set-key (kbd "s-}") 'elscreen-next)
 

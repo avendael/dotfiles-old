@@ -6,8 +6,12 @@
 (global-set-key "\C-cb" 'org-iswitchb)
 (setq org-directory "~/Dropbox/org/")
 (setq org-mobile-directory "~/Dropbox/Apps/MobileOrg/")
-(setq org-mobile-inbox-for-pull "~/Dropbox/org/flagged.org")
+(setq org-mobile-inbox-for-pull (concat org-directory "flagged.org"))
+(setq org-default-notes-file (concat org-directory "notes.org"))
 (setq org-completion-use-ido t)
+(setq org-clock-persist t)
+(setq org-clock-into-drawer t)
+(setq org-clock-idle-time 5)
 (setq org-outline-path-complete-in-steps nil)
 (setq org-complete-tags-always-offer-all-agenda-tags t)
 (add-to-list 'auto-mode-alist
@@ -18,7 +22,10 @@
             (local-set-key (kbd "C-c M-<") 'org-metaleft)
             (local-set-key (kbd "C-c M->") 'org-metaright)
             (local-set-key (kbd "C-c s M-<") 'org-shiftmetaleft)
-            (local-set-key (kbd "C-c s M->") 'org-shiftmetaright)))
+            (local-set-key (kbd "C-c s M->") 'org-shiftmetaright)
+            (local-set-key (kbd "C-c m p") 'org-mobile-push)
+            (local-set-key (kbd "C-c m P") 'org-mobile-pull)
+            (local-set-key (kbd "C-c i") 'org-indent-mode)))
 
 (setq org-disputed-keys
       (quote (([(shift up)] . [(meta p)]) ;; org-shiftup
@@ -36,7 +43,7 @@
 (setq org-use-fast-todo-selection t)
 (setq org-treat-S-cursor-todo-selection-as-state-change nil)
 (setq org-todo-keywords
-      (quote ((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d!/!)")
+      (quote ((sequence "TODO(t)" "NEXT(n!)" "|" "DONE(d!)")
               (sequence "WAITING(w@/!)" "HOLD(h@/!)" "|" "CANCELLED(c@/!)"))))
 (setq org-todo-state-tags-triggers
       (quote (("CANCELLED" ("CANCELLED" . t))
@@ -46,3 +53,5 @@
               ("TODO" ("WAITING" . nil) ("CANCELLED" . nil) ("HOLD" . nil))
               ("NEXT" ("WAITING" . nil) ("CANCELLED" . nil) ("HOLD" . nil))
               ("DONE" ("WAITING" . nil) ("CANCELLED" . nil) ("HOLD" . nil)))))
+
+(org-clock-persistence-insinuate)
