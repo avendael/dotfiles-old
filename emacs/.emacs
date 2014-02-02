@@ -110,7 +110,7 @@
              maxframe minimap multiple-cursors nose pony-mode popup s shimbun skewer-mode
              simple-httpd smex solarized-theme typing unbound undo-tree virtualenv vline w3m
              yasnippet zenburn-theme powerline json-mode feature-mode web-mode js-comint nodejs-repl
-             ace-jump-mode diff-hl))
+             ace-jump-mode diff-hl projectile))
 
 (add-to-list 'custom-safe-themes
              "cead5b757549e6272f7ffebbb87e190dc2b4036e4d035ba2eefdc41a23ba11a9"
@@ -173,6 +173,7 @@
 (init-customization "powerline")
 (init-customization "magit")
 (init-customization "js")
+(init-customization "projectile")
 
 (elscreen-start)
 (elscreen-restore)

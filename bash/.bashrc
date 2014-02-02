@@ -8,10 +8,13 @@ if [[ $OSTYPE == darwin* ]]; then
     export HOMEBREW_KEEP_INFO=1
     export EC2_HOME=~/.ec2
     export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
+    export PROJECTS_HOME=~/Development/Projects
     export EDITOR=/usr/local/Cellar/emacs/24.3/bin/emacsclient
     export WORKON_HOME=~/Development/Libraries/python-venv
     export ANDROID_HOME=~/Development/Libraries/android-sdk-macosx
     export MAILDIR_CACHE=~/Library/Caches/OfflineImap
+    export HOMEBREW_KEEP_INFO=1
+    export LT_HOME=${PROJECTS_HOME}/Projects/lighttable/deploy
     export NPM_HOME=/usr/local/Cellar/node/`node --version | tr -d 'v'`/lib/node_modules/npm
     export PATH=~/bin:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools:${EC2_HOME}/bin:/usr/local/Cellar/ctags/5.8/bin:/usr/local/bin:/usr/local/sbin:${PATH}:${NPM_HOME}/bin
 
