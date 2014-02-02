@@ -4,6 +4,7 @@ emacs/.emacs.d/org
 emacs/.emacs.d/backups
 emacs/.emacs.d/persistent-scratch
 emacs/.emacs.d/remote-hosts.el
+emacs/.emacs.d/org-clock-save.el
 emacs/auto-save-list
 emacs/%*
 pcache
