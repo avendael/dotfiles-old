@@ -86,11 +86,14 @@
 
 ;;-- ELPA --;;
 (require 'package)
-(package-initialize)
 (add-to-list 'package-archives
              '("marmalade" . "http://marmalade-repo.org/packages/") t)
 (add-to-list 'package-archives
      '("melpa" . "http://melpa.milkbox.net/packages/") t)
+
+(package-initialize)
+(unless package-archive-contents
+        (package-refresh-contents))
 
 ;; check if the packages are installed; if not, install it.
 (mapc
@@ -106,8 +109,8 @@
              js2-refactor dash magit git-rebase-mode git-commit-mode mark-multiple markdown-mode
              maxframe minimap multiple-cursors nose pony-mode popup s shimbun skewer-mode
              simple-httpd smex solarized-theme typing unbound undo-tree virtualenv vline w3m
-             yasnippet zenburn-theme powerline unicode-fonts json-mode feature-mode web-mode
-             ace-jump-mode))
+             yasnippet zenburn-theme powerline json-mode feature-mode web-mode js-comint nodejs-repl
+             ace-jump-mode diff-hl))
 
 (add-to-list 'custom-safe-themes
              "cead5b757549e6272f7ffebbb87e190dc2b4036e4d035ba2eefdc41a23ba11a9"

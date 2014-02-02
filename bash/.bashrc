@@ -3,6 +3,9 @@ if [[ $TERM == dumb ]]; then
 fi
 
 if [[ $OSTYPE == darwin* ]]; then
+    export LC_ALL=en_US.UTF-8
+    export LANG=en_US.UTF-8
+    export HOMEBREW_KEEP_INFO=1
     export EC2_HOME=~/.ec2
     export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
     export EDITOR=/usr/local/Cellar/emacs/24.3/bin/emacsclient
@@ -33,6 +36,8 @@ if [[ $OSTYPE == darwin* ]]; then
     if [ -f ${EC2_HOME}/env.sh ]; then
         . ${EC2_HOME}/env.sh
     fi
+
+    if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 fi
 
 export PS1="\[\e[0;34m\][\u@\h \[\e[0;32m\]\W\[\e[0;34m\]]\$(__git_ps1) \[\e[0;33m\]\$\[\e[0m\] "
