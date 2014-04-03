@@ -153,6 +153,7 @@ project-dir: The project root directory"
 (global-set-key (kbd "s-}") 'elscreen-next)
 
 ;; Osx style bindings
+(global-set-key (kbd "s-q") 'save-buffers-kill-terminal)
 (global-set-key (kbd "s-v") 'yank)
 (global-set-key (kbd "s-c") 'kill-ring-save)
 (global-set-key (kbd "s-x") 'kill-region)
@@ -181,3 +182,5 @@ project-dir: The project root directory"
 (add-hook 'html-mode-hook 'linum-mode)
 (add-hook 'html-mode-hook 'wrap-region-mode)
 (add-hook 'html-mode-hook 'diff-hl-mode)
+
+(setq initial-frame-alist (set-frame-parameter nil 'fullscreen 'fullheight))

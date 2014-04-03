@@ -1,11 +1,12 @@
 ;;-- IDO Mode --;;
 (require 'ido)
 (require 'ido-ubiquitous)
+(require 'ido-vertical-mode)
 (ido-mode)
 (setq ido-enable-flex-matching t
       ido-everywhere t)
-;(ido-ubiquitous-disable-in man)
 (ido-ubiquitous-mode)
+(ido-vertical-mode 1)
 
 ;;-- SMEX --;;
 (require 'smex)

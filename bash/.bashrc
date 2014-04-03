@@ -16,6 +16,7 @@ if [[ $OSTYPE == darwin* ]]; then
     export HOMEBREW_KEEP_INFO=1
     export LT_HOME=${PROJECTS_HOME}/Projects/lighttable/deploy
     export NPM_HOME=/usr/local/Cellar/node/`node --version | tr -d 'v'`/lib/node_modules/npm
+    export ATOM_REPOS_HOME=~/Development/Projects/atom
     export PATH=~/bin:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools:${EC2_HOME}/bin:/usr/local/Cellar/ctags/5.8/bin:/usr/local/bin:/usr/local/sbin:${PATH}:${NPM_HOME}/bin
 
     # Include osx specific aliases
@@ -39,6 +40,8 @@ if [[ $OSTYPE == darwin* ]]; then
     if [ -f ${EC2_HOME}/env.sh ]; then
         . ${EC2_HOME}/env.sh
     fi
+
+    [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
     if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 fi
