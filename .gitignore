@@ -18,6 +18,11 @@ bookmarks
 lastdir
 history
 archive-contents
+projectile-bookmarks.eld
+projectile.cache
+secrets.el.gpg
+*.gpg
+.cask/
 url/
 tmp/
 
