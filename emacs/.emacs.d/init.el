@@ -44,7 +44,6 @@
 (require 'avendael-scratch)
 (require 'avendael-org)
 (require 'avendael-ediff)
-(require 'avendael-powerline)
 
 ;; Third party package customizations
 (require 'avendael-lambda)
@@ -60,6 +59,8 @@
 (require 'avendael-magit)
 (require 'avendael-js)
 (require 'avendael-web-mode)
+(require 'avendael-powerline)
+(require 'avendael-evil)
 
 (provide 'init)
 ;;; init.el ends here

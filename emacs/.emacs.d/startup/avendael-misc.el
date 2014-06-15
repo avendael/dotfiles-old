@@ -21,6 +21,7 @@ print a message in the minibuffer with the result."
       (message "Buffer contains %d words." count))))
 
 (defun toggle-transparency ()
+  "Toggle transparent or opaque display."
   (interactive)
   (if (/=
        (cadr (frame-parameter nil 'alpha)) 100)
@@ -52,11 +53,13 @@ print a message in the minibuffer with the result."
     (call-interactively 'compile)))
 
 (defun eshell/clear ()
+  "Clear contents in eshell."
   (interactive)
   (let ((inhibit-read-only t))
     (erase-buffer)))
 
 (defun buffer-untabify ()
+  "Remove all tabs and convert them to spaces."
   (save-excursion
     (goto-char (point-min))
     (while (re-search-forward "[ \t]+$" nil t)
@@ -77,9 +80,9 @@ print a message in the minibuffer with the result."
 (defun open-remote-term (new-buffer-name cmd &rest switches)
   "Open a remote terminal with the specified arguments.
 
-new-buffer-name: The name to be used for the buffer to be opened.
-cmd: The command to be used for remote connection ie. ssh.
-switches: Arguments for cmd ie. avendael@remote-host.com"
+NEW-BUFFER-NAME: The name to be used for the buffer to be opened.
+CMD: The command to be used for remote connection ie. ssh.
+SWITCHES: Arguments for cmd ie. avendael@remote-host.com"
   (setq term-ansi-buffer-name new-buffer-name)
   (setq term-ansi-buffer-name (generate-new-buffer-name term-ansi-buffer-name))
   (setq term-ansi-buffer-name (apply 'make-term term-ansi-buffer-name cmd nil switches))
@@ -92,8 +95,8 @@ switches: Arguments for cmd ie. avendael@remote-host.com"
 (defun remote-term (username host)
   "Open a remote terminal using ssh with the specified arguments.
 
-username: The username to be used for connecting to the remote host.
-host: The remote host to connect to."
+USERNAME: The username to be used for connecting to the remote host.
+HOST: The remote host to connect to."
   (interactive "sConnect as: \nsConnect to: ")
   (open-remote-term (concat username "@" host ":term")
                "ssh"
@@ -102,8 +105,8 @@ host: The remote host to connect to."
 (defun open-dir-term (new-buffer-name dirname)
   "Open a terminal to the specified directory.
 
-new-buffer-name: The name to be used for the buffer to be opened.
-project-dir: The directory to open a shell to."
+NEW-BUFFER-NAME: The name to be used for the buffer to be opened.
+DIRNAME: The directory to open a shell to."
   (with-current-buffer (get-buffer "*scratch*")
     (cd dirname)
     (setq term-ansi-buffer-name new-buffer-name)
@@ -118,11 +121,23 @@ project-dir: The directory to open a shell to."
     (switch-to-buffer term-ansi-buffer-name)))
 
 (defun create-tags (dir-name)
-  "Create a tag file for the specified project directory. This function
-uses ctags instead of etags."
+  "Create a tag file for the specified project directory.
+This function uses ctags instead of etags.
+
+DIR-NAME - The directory name"
   (interactive "DProject Directory: ")
   (shell-command (format "%s -e -R %s" ctags-path dir-name
                          (directory-file-name dir-name))))
+
+(defun toggle-sticky-buffer-window ()
+  "Toggle whether this window is dedicated to this buffer."
+  (interactive)
+  (set-window-dedicated-p
+   (selected-window)
+   (not (window-dedicated-p (selected-window))))
+  (if (window-dedicated-p (selected-window))
+      (message "Window is now dedicated.")
+    (message "Window is no longer dedicated.")))
 
 ;; Remapped keys
 (global-set-key (kbd "M-/") 'hippie-expand)
@@ -161,10 +176,14 @@ uses ctags instead of etags."
 (global-set-key (kbd "<C-s-f>") 'maximize-frame)
 
 ;; Windmove
-(global-set-key (kbd "s-f") 'windmove-right)
-(global-set-key (kbd "s-s") 'windmove-left)
-(global-set-key (kbd "s-e") 'windmove-up)
-(global-set-key (kbd "s-d") 'windmove-down)
+(global-set-key (kbd "C-s-l") 'windmove-right)
+(global-set-key (kbd "C-s-h") 'windmove-left)
+(global-set-key (kbd "C-s-k") 'windmove-up)
+(global-set-key (kbd "C-s-j") 'windmove-down)
+(global-set-key (kbd "s-l") 'windmove-right)
+(global-set-key (kbd "s-h") 'windmove-left)
+(global-set-key (kbd "s-k") 'windmove-up)
+(global-set-key (kbd "s-j") 'windmove-down)
 
 (global-set-key (kbd "C-;") 'ace-jump-mode)
 
