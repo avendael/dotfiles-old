@@ -198,6 +198,7 @@ DIR-NAME - The directory name"
 (add-hook 'html-mode-hook 'diff-hl-mode)
 
 (setq initial-frame-alist (set-frame-parameter nil 'fullscreen 'fullheight))
+(setq linum-relative-current-symbol "")
 
 (provide 'avendael-misc)
 ;;; avendael-misc.el ends here
