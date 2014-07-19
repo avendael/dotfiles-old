@@ -17,13 +17,37 @@
  "s" 'ido-switch-buffer
  "d" 'ido-dired
  "k" 'ido-kill-buffer
+
+ ;; projectile
  "pf" 'projectile-find-file
  "ps" 'projectile-switch-project
+
+ ;; magit
  "ms" 'magit-status
  "mc" 'magit-checkout
  "mg" 'magit-run-gitk
  "ml" 'magit-log
- "mr" 'magit-reflog)
+ "mf" 'magit-fetch
+ "mr" 'magit-reflog
+
+ ;; elscreen
+ "ec" 'elscreen-create
+ "et" 'elscreen-toggle-display-tab
+ "ei" 'elscreen-display-time
+ "es" 'elscreen-select-and-goto
+ "ep" 'elscreen-previous
+ "en" 'elscreen-next
+ "ej" 'elscreen-jump
+ "ed" 'elscreen-dired
+ "ex" 'elscreen-execute-extended-command
+ "ek" 'elscreen-kill
+ "eq" 'elscreen-kill-screen-and-buffers
+ "eo" 'elscreen-kill-others
+ "el" 'elscreen-clone
+ "er" 'elscreen-find-and-goto-by-buffer
+ "ef" 'elscreen-find-file
+ "em" 'elscreen-display-last-message
+ "e?" 'elscreen-help)
 
 (evil-mode 1)
 

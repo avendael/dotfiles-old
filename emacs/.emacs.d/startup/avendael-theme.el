@@ -13,5 +13,8 @@
              "628278136f88aa1a151bb2d6c8a86bf2b7631fbea5f0f76cba2a0079cd910f7d")
 (load-theme 'monokai t)
 
+(set-face-attribute 'default nil :family "Anonymous Pro" :height 150)
+(setq-default line-spacing 1)
+
 (provide 'avendael-theme)
 ;;; avendael-theme.el ends here

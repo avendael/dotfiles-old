@@ -10,12 +10,13 @@ if [[ $OSTYPE == darwin* ]]; then
     export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
     export PROJECTS_HOME=~/Development/Projects
     export EDITOR=/usr/local/bin/emacsclient
+    export GOPATH=~/Development/Libraries/go
     export WORKON_HOME=~/Development/Libraries/python-venv
     export ANDROID_HOME=~/Development/Libraries/android-sdk-macosx
     export MAILDIR_CACHE=~/Library/Caches/OfflineImap
     export NPM_HOME=/usr/local/Cellar/node/`node --version | tr -d 'v'`/lib/node_modules/npm
     export ATOM_REPOS_HOME=~/Development/Projects/atom
-    export PATH=~/bin:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools:${EC2_HOME}/bin:/usr/local/Cellar/ctags/5.8/bin:/usr/local/bin:/usr/local/sbin:${PATH}:${NPM_HOME}/bin
+    export PATH=~/bin:${GOPATH}/bin:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools:${EC2_HOME}/bin:/usr/local/Cellar/ctags/5.8/bin:/usr/local/bin:/usr/local/sbin:${PATH}:${NPM_HOME}/bin
 
     # Include osx specific aliases
     alias ls='ls -G'
@@ -38,9 +39,6 @@ if [[ $OSTYPE == darwin* ]]; then
     if [ -f ${EC2_HOME}/env.sh ]; then
         . ${EC2_HOME}/env.sh
     fi
-
-    # Autojump
-    [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
     # rbenv
     if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi

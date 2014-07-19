@@ -44,6 +44,7 @@
 (require 'avendael-scratch)
 (require 'avendael-org)
 (require 'avendael-ediff)
+(require 'avendael-ruby)
 
 ;; Third party package customizations
 (require 'avendael-lambda)
