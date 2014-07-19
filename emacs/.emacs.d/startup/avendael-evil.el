@@ -9,7 +9,19 @@
 (require 'evil-leader)
 
 (global-evil-leader-mode)
+(setq-default evil-cross-lines t)
+
 (define-key minibuffer-local-map (kbd "<escape>") 'keyboard-escape-quit)
+(define-key evil-visual-state-map (kbd "<escape>") 'keyboard-quit)
+(define-key minibuffer-local-ns-map (kbd "<escape>") 'keyboard-escape-quit)
+(define-key minibuffer-local-completion-map (kbd "<escape>") 'keyboard-escape-quit)
+(define-key minibuffer-local-must-match-map (kbd "<escape>") 'keyboard-escape-quit)
+(define-key minibuffer-local-isearch-map (kbd "<escape>") 'keyboard-escape-quit)
+
+(define-key evil-normal-state-map (kbd "<remap> <evil-next-line>") 'evil-next-visual-line)
+(define-key evil-normal-state-map (kbd "<remap> <evil-previous-line>") 'evil-previous-visual-line)
+(define-key evil-motion-state-map (kbd "<remap> <evil-next-line>") 'evil-next-visual-line)
+(define-key evil-motion-state-map (kbd "<remap> <evil-previous-line>") 'evil-previous-visual-line)
 
 (evil-leader/set-leader "<SPC>")
 (evil-leader/set-key
