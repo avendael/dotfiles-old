@@ -12,6 +12,7 @@
             '(lambda ()
                (make-local-variable 'write-contents-hooks)
                (add-hook 'write-contents-hooks 'buffer-untabify)))
+(setq elpy-rpc-backend "jedi")
 (elpy-enable)
 
 (setq python-remove-cwd-from-path nil)

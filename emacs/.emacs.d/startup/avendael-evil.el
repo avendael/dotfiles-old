@@ -11,17 +11,27 @@
 (global-evil-leader-mode)
 (setq-default evil-cross-lines t)
 
-(define-key minibuffer-local-map (kbd "<escape>") 'keyboard-escape-quit)
-(define-key evil-visual-state-map (kbd "<escape>") 'keyboard-quit)
-(define-key minibuffer-local-ns-map (kbd "<escape>") 'keyboard-escape-quit)
-(define-key minibuffer-local-completion-map (kbd "<escape>") 'keyboard-escape-quit)
-(define-key minibuffer-local-must-match-map (kbd "<escape>") 'keyboard-escape-quit)
-(define-key minibuffer-local-isearch-map (kbd "<escape>") 'keyboard-escape-quit)
+(define-key minibuffer-local-map
+  (kbd "<escape>") 'keyboard-escape-quit)
+(define-key evil-visual-state-map
+  (kbd "<escape>") 'keyboard-quit)
+(define-key minibuffer-local-ns-map
+  (kbd "<escape>") 'keyboard-escape-quit)
+(define-key minibuffer-local-completion-map
+  (kbd "<escape>") 'keyboard-escape-quit)
+(define-key minibuffer-local-must-match-map
+  (kbd "<escape>") 'keyboard-escape-quit)
+(define-key minibuffer-local-isearch-map
+  (kbd "<escape>") 'keyboard-escape-quit)
 
-(define-key evil-normal-state-map (kbd "<remap> <evil-next-line>") 'evil-next-visual-line)
-(define-key evil-normal-state-map (kbd "<remap> <evil-previous-line>") 'evil-previous-visual-line)
-(define-key evil-motion-state-map (kbd "<remap> <evil-next-line>") 'evil-next-visual-line)
-(define-key evil-motion-state-map (kbd "<remap> <evil-previous-line>") 'evil-previous-visual-line)
+(define-key evil-normal-state-map
+  (kbd "<remap> <evil-next-line>") 'evil-next-visual-line)
+(define-key evil-normal-state-map
+  (kbd "<remap> <evil-previous-line>") 'evil-previous-visual-line)
+(define-key evil-motion-state-map
+  (kbd "<remap> <evil-next-line>") 'evil-next-visual-line)
+(define-key evil-motion-state-map
+  (kbd "<remap> <evil-previous-line>") 'evil-previous-visual-line)
 
 (evil-leader/set-leader "<SPC>")
 (evil-leader/set-key
@@ -29,6 +39,11 @@
  "s" 'ido-switch-buffer
  "d" 'ido-dired
  "k" 'ido-kill-buffer
+
+ ;; shell
+ "ts" 'shell
+ "tt" 'ansi-term
+ "tp" 'shell-pwd
 
  ;; projectile
  "pf" 'projectile-find-file
@@ -60,7 +75,26 @@
  "ef" 'elscreen-find-file
  "em" 'elscreen-display-last-message
  "e?" 'elscreen-help)
+(evil-leader/set-key-for-mode 'python-mode
+  "<" 'python-indent-shift-left
+  ">" 'python-indent-shift-right
 
+  "ow" 'pyvenv-workon
+  "oe" 'pyvenv-deactivate
+  "or" 'run-python
+  "od" 'elpy-doc
+  "os" 'elpy-shell-switch-to-shell
+
+  ;; pony
+  "opb" 'pony-browser
+  "ops" 'pony-shell
+  "opd" 'pony-db-shell
+  "opf" 'pony-fabric
+  "opm" 'pony-manage
+  "opr" 'pony-runserver
+  "opt" 'pony-test
+  "opgs" 'pony-goto-settings
+  "opgt" 'pony-goto-template)
 (evil-mode 1)
 
 (provide 'avendael-evil)
