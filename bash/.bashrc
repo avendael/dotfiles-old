@@ -11,7 +11,6 @@ if [[ $OSTYPE == darwin* ]]; then
     export PROJECTS_HOME=~/Development/Projects
     export EDITOR=/usr/local/bin/emacsclient
     export GOPATH=~/Development/Libraries/go
-    export WORKON_HOME=~/Development/Libraries/python-venv
     export ANDROID_HOME=~/Development/Libraries/android-sdk-macosx
     export MAILDIR_CACHE=~/Library/Caches/OfflineImap
     export NPM_HOME=/usr/local/Cellar/node/`node --version | tr -d 'v'`/lib/node_modules/npm

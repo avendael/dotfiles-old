@@ -51,6 +51,7 @@
                                                            (cdr powerline-default-separator-dir))))
                           (lhs (list (powerline-raw "%*" nil 'l)
                                      (powerline-buffer-size nil 'l)
+                                     (powerline-raw pyvenv-mode-line-indicator)
                                      (powerline-buffer-id nil 'l)
                                      (powerline-raw " ")
                                      (funcall separator-left mode-line face1)

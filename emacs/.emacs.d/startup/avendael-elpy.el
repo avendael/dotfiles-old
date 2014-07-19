@@ -7,7 +7,6 @@
 ;;; Code:
 (require 'python)
 (require 'elpy)
-(require 'virtualenv)
 
 (add-hook 'python-mode-hook
             '(lambda ()
@@ -17,7 +16,6 @@
 
 (setq python-remove-cwd-from-path nil)
 (setq python-shell-interpreter "ipython")
-(setq virtualenv-root "~/Development/Libraries/python-venv/")
 
 (provide 'avendael-elpy)
 ;;; avendael-elpy.el ends here
