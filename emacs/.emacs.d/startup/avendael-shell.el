@@ -39,6 +39,7 @@ COMMAND: the command."
   'comint-watch-for-password-prompt)
 
 (add-hook 'shell-mode-hook 'avendael-shell-mode-hook)
+(add-hook 'term-mode-hook 'evil-emacs-state)
 
 (provide 'avendael-shell)
 ;;; avendael-shell.el ends here

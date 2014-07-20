@@ -56,6 +56,7 @@
 (require 'avendael-autocomplete)
 (require 'avendael-pony)
 (require 'avendael-wrap-region)
+(require 'avendael-helm)
 (require 'avendael-misc)
 (require 'avendael-magit)
 (require 'avendael-js)

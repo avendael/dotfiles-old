@@ -35,10 +35,21 @@
 
 (evil-leader/set-leader "<SPC>")
 (evil-leader/set-key
- "f" 'ido-find-file
- "s" 'ido-switch-buffer
+ "f" 'helm-find-files
+ "s" 'helm-buffers-list
  "d" 'ido-dired
  "k" 'ido-kill-buffer
+
+ ;; extended commands
+ "xt" 'create-tags
+
+ ;; helm
+ "h." 'helm-etags-select
+ "hc" 'helm-flycheck
+ "h#" 'helm-themes
+ "hgg" 'helm-ag
+ "hgf" 'helm-ag-this-file
+ "hgd" 'helm-do-ag
 
  ;; shell
  "ts" 'shell
@@ -46,7 +57,7 @@
  "tp" 'shell-pwd
 
  ;; projectile
- "pf" 'projectile-find-file
+ "pf" 'helm-projectile
  "ps" 'projectile-switch-project
 
  ;; magit
@@ -84,6 +95,7 @@
   "or" 'run-python
   "od" 'elpy-doc
   "os" 'elpy-shell-switch-to-shell
+  "o." 'elpy-goto-definition
 
   ;; pony
   "opb" 'pony-browser

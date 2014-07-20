@@ -120,14 +120,15 @@ DIRNAME: The directory to open a shell to."
     (term-set-escape-char ?\C-x)
     (switch-to-buffer term-ansi-buffer-name)))
 
+(defvar ctags-path "/usr/local/bin/ctags")
 (defun create-tags (dir-name)
   "Create a tag file for the specified project directory.
 This function uses ctags instead of etags.
 
 DIR-NAME - The directory name"
   (interactive "DProject Directory: ")
-  (shell-command (format "%s -e -R %s" ctags-path dir-name
-                         (directory-file-name dir-name))))
+  (shell-command
+   (format "%s -e -R %s" ctags-path dir-name (directory-file-name dir-name))))
 
 (defun toggle-sticky-buffer-window ()
   "Toggle whether this window is dedicated to this buffer."
