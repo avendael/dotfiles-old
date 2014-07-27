@@ -2,7 +2,7 @@
 
 ;;; Commentary:
 ;;
-;; Altered variables. This doesn't require projectile because for some
+;; Altered variables.  This doesn't require projectile because for some
 ;; reason, doing so won't allow rebinding of projectile-keymap-prefix.
 ;; TODO of course.
 ;;

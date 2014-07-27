@@ -33,12 +33,15 @@
 (define-key evil-motion-state-map
   (kbd "<remap> <evil-previous-line>") 'evil-previous-visual-line)
 
+(define-key evil-normal-state-map (kbd "C-w 0") 'delete-window)
+
 (evil-leader/set-leader "<SPC>")
 (evil-leader/set-key
- "f" 'helm-find-files
- "s" 'helm-buffers-list
+ "f" 'ido-find-file
+ "s" 'ido-switch-buffer
  "d" 'ido-dired
  "k" 'ido-kill-buffer
+ "i" 'imenu
 
  ;; extended commands
  "xt" 'create-tags
@@ -57,7 +60,7 @@
  "tp" 'shell-pwd
 
  ;; projectile
- "pf" 'helm-projectile
+ "pf" 'projectile-find-file
  "ps" 'projectile-switch-project
 
  ;; magit

@@ -12,8 +12,7 @@
             '(lambda ()
                (make-local-variable 'write-contents-hooks)
                (add-hook 'write-contents-hooks 'buffer-untabify)))
-(setq elpy-default-minor-modes
-      '(eldoc-mode highlight-indentation-mode yas-minor-mode auto-complete-mode))
+(setq elpy-default-minor-modes '(eldoc-mode yas-minor-mode auto-complete-mode))
 (setq elpy-rpc-backend "jedi")
 (elpy-enable)
 

@@ -167,7 +167,7 @@ DIR-NAME - The directory name"
 (global-set-key (kbd "s-q") 'save-buffers-kill-terminal)
 (global-set-key (kbd "s-v") 'yank)
 (global-set-key (kbd "s-c") 'kill-ring-save)
-(global-set-key (kbd "s-x") 'kill-region)
+(global-set-key (kbd "s-x") 'smex)
 (global-set-key (kbd "s-z") 'undo-tree-undo)
 (global-set-key (kbd "s-s") 'save-buffer)
 (global-set-key (kbd "s-Z") 'undo-tree-redo)
