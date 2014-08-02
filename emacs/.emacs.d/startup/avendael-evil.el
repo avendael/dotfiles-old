@@ -47,11 +47,10 @@
  "xt" 'create-tags
 
  ;; helm
- "h." 'helm-etags-select
+ "gg" 'helm-git-grep
  "hc" 'helm-flycheck
  "h#" 'helm-themes
  "hgg" 'helm-ag
- "hgf" 'helm-ag-this-file
  "hgd" 'helm-do-ag
 
  ;; shell
@@ -62,6 +61,7 @@
  ;; projectile
  "pf" 'projectile-find-file
  "ps" 'projectile-switch-project
+ "pg" 'projectile-ag
 
  ;; magit
  "ms" 'magit-status

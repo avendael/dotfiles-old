@@ -167,6 +167,7 @@ DIR-NAME - The directory name"
 (global-set-key (kbd "s-q") 'save-buffers-kill-terminal)
 (global-set-key (kbd "s-v") 'yank)
 (global-set-key (kbd "s-c") 'kill-ring-save)
+(global-set-key (kbd "s-w") 'kill-this-buffer)
 (global-set-key (kbd "s-x") 'smex)
 (global-set-key (kbd "s-z") 'undo-tree-undo)
 (global-set-key (kbd "s-s") 'save-buffer)
@@ -176,6 +177,11 @@ DIR-NAME - The directory name"
 (global-set-key (kbd "<s-up>") 'scroll-down-command)
 (global-set-key (kbd "<s-down>") 'scroll-up-command)
 (global-set-key (kbd "<C-s-f>") 'maximize-frame)
+
+;; Sublime style bindings
+(global-set-key (kbd "s-S-r") 'helm-git-grep)
+(global-set-key (kbd "s-r") 'imenu)
+(global-set-key (kbd "s-S-p") 'smex)
 
 ;; Windmove
 (global-set-key (kbd "C-s-l") 'windmove-right)

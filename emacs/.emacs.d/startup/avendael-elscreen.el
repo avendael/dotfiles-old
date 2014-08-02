@@ -102,6 +102,7 @@ AD-DO-IT do it do it do it."
 (elscreen-start)
 (elscreen-restore)
 (elscreen-monokai)
+(elscreen-toggle-display-tab)
 
 (provide 'avendael-elscreen)
 ;;; avendael-elscreen.el ends here

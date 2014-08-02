@@ -7,6 +7,7 @@
 ;;; Code:
 (require 'python)
 (require 'elpy)
+;(require 'jedi)
 
 (add-hook 'python-mode-hook
             '(lambda ()
@@ -14,6 +15,7 @@
                (add-hook 'write-contents-hooks 'buffer-untabify)))
 (setq elpy-default-minor-modes '(eldoc-mode yas-minor-mode auto-complete-mode))
 (setq elpy-rpc-backend "jedi")
+(setq jedi:complete-on-dot t)
 (elpy-enable)
 
 (setq python-remove-cwd-from-path nil)

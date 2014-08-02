@@ -47,6 +47,7 @@
 (require 'avendael-ruby)
 
 ;; Third party package customizations
+(require 'avendael-ag)
 (require 'avendael-lambda)
 (require 'avendael-irc)
 (require 'avendael-flycheck)

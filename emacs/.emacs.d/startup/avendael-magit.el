@@ -8,9 +8,6 @@
 (require 'magit)
 (global-auto-revert-mode t)
 
-(when (equal system-type 'darwin)
-  (setq magit-emacsclient-executable "/usr/local/bin/emacsclient"))
-
 (defadvice git-commit (after git-commit-refresh-diff-hl activate)
   "Update diff-hl after git-commit."
   (diff-hl-update))
