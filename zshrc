@@ -1,70 +1,104 @@
-# Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
-
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
+export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="avendael"
+COMPLETION_WAITING_DOTS="true"
 
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# Set to this to use case-sensitive completion
-# CASE_SENSITIVE="true"
-
-# Comment this out to disable bi-weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment to change how often before auto-updates occur? (in days)
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment following line if you want to disable colors in ls
-# DISABLE_LS_COLORS="true"
-
-# Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment following line if you want to disable command autocorrection
-# DISABLE_CORRECTION="true"
-
-# Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment following line if you want to disable marking untracked files under
-# VCS as dirty. This makes repository status check for large repositories much,
-# much faster.
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git fasd brew)
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
+# User configuration
+export KEYTIMEOUT=1
 
-export EDITOR="emacsclient $1"
-export EC2_HOME=~/.ec2
-export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
-export EDITOR=/usr/local/Cellar/emacs/24.3/bin/emacsclient
-export WORKON_HOME=~/Development/Libraries/python-venv
-export NPM_HOME=/usr/local/Cellar/node/`node --version | tr -d 'v'`/lib/node_modules/npm
-export ANDROID_HOME=~/Development/Libraries/android-sdk-macosx
-export PATH=~/bin:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools:${EC2_HOME}/bin:/usr/local/bin:/usr/local/sbin:${PATH}:${NPM_HOME}/bin
+if [[ $OSTYPE == darwin* ]]; then
+    export EDITOR=/usr/local/bin/vim
+    export DOCKER_HOST=tcp://localhost:4243
+    export LC_ALL=en_US.UTF-8
+    export LANG=en_US.UTF-8
+    export EC2_HOME=~/.ec2
+    export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
+    export PROJECTS_HOME=~/Development/Projects
+    export GOPATH=~/Development/Libraries/go
+    export ANDROID_HOME=~/Development/Libraries/android-sdk-macosx
+    export MAILDIR_CACHE=~/Library/Caches/OfflineImap
+    export NPM_HOME=/usr/local/Cellar/node/`node --version | tr -d 'v'`/lib/node_modules/npm
+    export ATOM_REPOS_HOME=~/Development/Projects/atom
+    export PATH=~/bin:${GOPATH}/bin:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools:${EC2_HOME}/bin:${NPM_HOME}/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
 
-source $EC2_HOME/env.sh
+    # Include osx specific aliases
+    alias ls='ls -G'
 
-bindkey -e
-bindkey '^R' history-incremental-search-backward
-bindkey '^S' history-incremental-search-forward
-bindkey '^P' history-search-backward
-bindkey '^N' history-search-forward
+    # Include osx virtualenvwrapper script
+    if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+        . /usr/local/bin/virtualenvwrapper.sh
+    else
+        echo "Virtualenvwrapper not found"
+    fi
 
+    # Include EC2 keys
+    if [ -f ${EC2_HOME}/env.sh ]; then
+        . ${EC2_HOME}/env.sh
+    fi
+fi
+
+#export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# zsh behave inside emacs
 if [[ -n "$INSIDE_EMACS" && "$TERM" != "dumb" ]]; then
     chpwd() { print -P "\033AnSiTc %d" }
     print -P "\033AnSiTu %n"
     print -P "\033AnSiTc %d"
 fi
+
+# Use rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+# Use fasd
+eval "$(fasd --init auto)"
+
+# Show insert or normal mode
+function zle-line-init zle-keymap-select {
+    VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]% %{$reset_color%}"
+    RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $EPS1"
+    zle reset-prompt
+}
+
+zle -N zle-line-init
+zle -N zle-keymap-select
+
+if [[ $TERM == dumb ]]; then
+    export NODE_NO_READLINE=1
+fi
+
+alias c=clear
