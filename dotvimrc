@@ -1,0 +1,157 @@
+" *init* "
+
+let g:mapleader=" "
+
+" Disengage filetype
+set nocompatible
+filetype off
+
+" Include Vundle in runtime path and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" Le Plugins
+Plugin 'gmarik/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'kien/ctrlp.vim'
+Plugin 'majutsushi/tagbar'
+Plugin 'tomasr/molokai'
+Plugin 'sickill/vim-monokai'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'FelikZ/ctrlp-py-matcher'
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'scrooloose/syntastic'
+Plugin 'bling/vim-airline'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'jmcantrell/vim-virtualenv'
+Plugin 'rking/ag.vim'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'jpalardy/vim-slime'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'ervandew/supertab'
+Plugin 'mattn/emmet-vim'
+
+call vundle#end()
+
+" Reengage filetype
+filetype plugin indent on
+
+" *base* "
+
+" Status line
+set laststatus=2
+set novisualbell
+
+" Set default encoding
+set encoding=utf-8
+
+" Hybrid relative numbers
+set rnu
+set nu
+
+" Noisy shit
+set noerrorbells
+set novisualbell
+set fileformats=unix,mac
+set et
+
+" Wildmenu
+set wildmode=list:longest,list:full
+set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
+set wmnu
+
+" Put swp files here
+set backupdir=~/.vim/swp
+set directory=~/.vim/swp
+
+" Detector
+nmap <leader>- :set list!<CR>
+set listchars=tab:▸\ ,eol:¬
+
+" *filetypes* "
+
+au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
+au FileType c,cpp,java,php,python,ruby,html,coffee,mustache,sass,css,conf,haskell,zsh autocmd BufWritePre <buffer> :%s/\s\+$//e
+
+" *theme* "
+
+syntax enable
+set background=dark
+colo Tomorrow-Night
+
+" *airline* "
+
+let g:airline_powerline_fonts=1
+
+" *syntastic* "
+
+let g:syntastic_error_symbol = '✗✗'
+let g:syntastic_style_error_symbol = '✠✠'
+let g:syntastic_warning_symbol = '∆∆'
+let g:syntastic_style_warning_symbol = '≈≈'
+
+" *ctrlp* "
+
+let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
+      \ --ignore .git
+      \ --ignore .svn
+      \ --ignore .hg
+      \ --ignore .DS_Store
+      \ --ignore "**/*.pyc"
+      \ -g ""'
+
+map <leader>gT :CtrlPTag<CR>
+map <leader>gt :CtrlPBufTag<CR>
+
+" *ag* "
+map <leader>ga :Ag<CR>
+
+" *tagbar* "
+map <leader>bt :TagbarToggle<CR>
+
+" *nerdtree* "
+map <leader>bn :NERDTreeToggle<CR>
+
+" *slime* "
+let g:slime_target = "tmux"
+
+" *fugitive* "
+map <leader>ms :Gstatus<CR>
+map <leader>mb :Gblame<CR>
+map <leader>mc :Gcommit<CR>
+map <leader>mm :Gmove<CR>
+map <leader>mr :Gremove<CR>
+map <leader>ml :Glog<CR>
+map <leader>md :Gdiff<CR>
+map <leader>mw :Gwrite<CR>
+
+" *ycm* "
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+nnoremap <leader>gd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+" *ultisnips* "
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+
+" *emmet* "
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+
+" *keys* "
+nnoremap j gj
+nnoremap k gk
+vnoremap j gj
+vnoremap k gk
+
+map <leader>s :w<CR>
+map <leader>Q :qall!<CR>
