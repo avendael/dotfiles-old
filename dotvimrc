@@ -38,6 +38,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'ervandew/supertab'
 Plugin 'mattn/emmet-vim'
+Plugin 'christoomey/vim-tmux-navigator'
 
 call vundle#end()
 
@@ -99,26 +100,30 @@ let g:syntastic_warning_symbol = '∆∆'
 let g:syntastic_style_warning_symbol = '≈≈'
 
 " *ctrlp* "
-
 let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ --ignore .git
       \ --ignore .svn
       \ --ignore .hg
       \ --ignore .DS_Store
-      \ --ignore "**/*.pyc"
+      \ --ignore "**/**/*.pyc"
+      \ --ignore "*.pyc"
+      \ --ignore "*.class"
+      \ --ignore "*.o"
+      \ --ignore "*.swp"
       \ -g ""'
+let g:ctrlp_buftag_types = { 'javascript': '--language-force=javascript --javascript-types=fcmv'  }
 
 map <leader>gT :CtrlPTag<CR>
 map <leader>gt :CtrlPBufTag<CR>
 
 " *ag* "
-map <leader>ga :Ag<CR>
+map <leader>ga :Ag
 
 " *tagbar* "
-map <leader>bt :TagbarToggle<CR>
+map <leader>kt :TagbarToggle<CR>
 
 " *nerdtree* "
-map <leader>bn :NERDTreeToggle<CR>
+map <leader>kb :NERDTreeToggle<CR>
 
 " *slime* "
 let g:slime_target = "tmux"
@@ -139,6 +144,9 @@ let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<C-n>'
 nnoremap <leader>gd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
+" *jedi* "
+autocmd FileType python setlocal completeopt-=preview
+
 " *ultisnips* "
 let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
@@ -152,6 +160,11 @@ nnoremap j gj
 nnoremap k gk
 vnoremap j gj
 vnoremap k gk
+
+nmap <silent> <C-k> :wincmd k<CR>
+nmap <silent> <C-j> :wincmd j<CR>
+nmap <silent> <C-l> :wincmd l<CR>
+nmap <silent> <C-h> :wincmd h<CR>
 
 map <leader>s :w<CR>
 map <leader>Q :qall!<CR>
