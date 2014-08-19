@@ -51,6 +51,9 @@ filetype plugin indent on
 set laststatus=2
 set novisualbell
 
+" Colorful life
+set t_Co=256
+
 " Set default encoding
 set encoding=utf-8
 
