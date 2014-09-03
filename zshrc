@@ -29,7 +29,7 @@ if [[ $OSTYPE == darwin* ]]; then
     export EC2_HOME=~/.ec2
     export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
     export PROJECTS_HOME=~/Development/Projects
-    export GOPATH=~/Development/Libraries/go
+    export GOPATH=~/Development/go
     export ANDROID_HOME=~/Development/Libraries/android-sdk-macosx
     export MAILDIR_CACHE=~/Library/Caches/OfflineImap
     export NPM_HOME=/usr/local/Cellar/node/`node --version | tr -d 'v'`/lib/node_modules/npm
@@ -102,3 +102,4 @@ if [[ $TERM == dumb ]]; then
 fi
 
 alias c=clear
+alias gss="git status -sb"

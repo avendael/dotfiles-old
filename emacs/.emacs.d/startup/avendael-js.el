@@ -25,7 +25,10 @@
              (local-set-key "\C-c\C-b" 'js-send-buffer-and-go)
              (local-set-key "\C-cl" 'js-load-file-and-go)))
 
-(add-to-list 'auto-mode-alist (cons (rx ".js" eos) 'js2-mode))
+(setq js2-basic-offset 2)
+(setq js2-bounce-indent-p t)
+(setq js2-auto-indent-p nil)
+
 (setq-default js2-global-externs
               '("clearTimeout" "setInterval" "clearInterval" "location" "__dirname"
                 "console" "JSON" "module" "require" "buster" "sinon" "assert" "refute"

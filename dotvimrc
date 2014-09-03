@@ -12,14 +12,14 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'gmarik/Vundle.vim'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-commentary'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'sickill/vim-monokai'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'davidhalter/jedi-vim'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'bling/vim-airline'
@@ -68,7 +68,7 @@ au FileType c,cpp,java,php,python,ruby,html,coffee,mustache,sass,css,conf,haskel
 set laststatus=2
 set novisualbell
 
-" Colorful life
+"Colorful life
 set t_Co=256
 
 " Set default encoding
@@ -81,7 +81,7 @@ set nu
 " Search
 set incsearch
 set hlsearch
-nmap <leader>l :noh<CR>
+nmap <leader>kh :noh<CR>
 
 " Noisy shit
 set noerrorbells
@@ -97,9 +97,12 @@ set listchars=tab:▸\ ,eol:¬
 set list
 nmap <leader>- :set list!<CR>
 
+" No NERDTree because we can
+nmap <leader>d :Explore<CR>
+
 " Wildmenu
 set wildmode=list:longest,list:full
-set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
+set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,*.class,.svn,vendor/gems/*
 set wmnu
 
 " Put swp files here
@@ -131,13 +134,10 @@ map <leader>ga :Ag
 
 map <leader>kt :TagbarToggle<CR>
 
-" *nerdtree* "
-
-map <leader>kb :NERDTreeToggle<CR>
-
 " *slime* "
 
 let g:slime_target = "tmux"
+let g:slime_python_ipython = 1
 
 " *fugitive* "
 
@@ -152,9 +152,9 @@ map <leader>mw :Gwrite<CR>
 
 " *ycm* "
 
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-let g:SuperTabDefaultCompletionType = '<C-n>'
+let g:ycm_key_list_select_completion = ['<C-Tab>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-S-Tab>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-Tab>'
 let g:ycm_path_to_python_interpreter = '/usr/bin/python'
 nnoremap <leader>gd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
@@ -212,6 +212,9 @@ nmap <leader>/ :Unite line<CR>
 call unite#custom#source('file,file/new,buffer,file_rec,line',
     \ 'matchers',
     \ 'matcher_fuzzy')
+
+" Fuzzy buffer switcher
+nmap <leader>e :Unite buffer<CR>
 
 " *keys* "
 

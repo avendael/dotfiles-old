@@ -23,12 +23,11 @@ projectile-bookmarks.eld
 projectile.cache
 secrets.el.gpg
 *.gpg
-.cask/
+emacs/.emacs.d/.cask/
+.ruby-version
 url/
 tmp/
-
 *.pyc
 /emacs/.emacs.d/.org-id-locations
 /emacs/.emacs.d/elpa
-
 *.orig

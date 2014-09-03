@@ -48,6 +48,7 @@
 
  ;; helm
  "gg" 'helm-git-grep
+ "gt" 'helm-etags-select
  "hc" 'helm-flycheck
  "h#" 'helm-themes
  "hgg" 'helm-ag

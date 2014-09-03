@@ -7,7 +7,6 @@
 ;;; Code:
 (require 'python)
 (require 'elpy)
-;(require 'jedi)
 
 (add-hook 'python-mode-hook
             '(lambda ()

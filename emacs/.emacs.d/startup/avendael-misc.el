@@ -207,6 +207,7 @@ DIR-NAME - The directory name"
 
 (setq initial-frame-alist (set-frame-parameter nil 'fullscreen 'fullheight))
 (setq linum-relative-current-symbol "")
+(toggle-transparency)
 
 (provide 'avendael-misc)
 ;;; avendael-misc.el ends here
