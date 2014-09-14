@@ -98,9 +98,10 @@ SWITCHES: Arguments for cmd ie. avendael@remote-host.com"
 USERNAME: The username to be used for connecting to the remote host.
 HOST: The remote host to connect to."
   (interactive "sConnect as: \nsConnect to: ")
-  (open-remote-term (concat username "@" host ":term")
-               "ssh"
-               (concat username "@" host)))
+  (open-remote-term
+      (concat username "@" host ":term")
+      "ssh"
+      (concat username "@" host)))
 
 (defun open-dir-term (new-buffer-name dirname)
   "Open a terminal to the specified directory.
@@ -160,8 +161,6 @@ DIR-NAME - The directory name"
 (global-set-key (kbd "C-x 5 p") 'ns-prev-frame)
 (global-set-key (kbd "C-x 5 /") 'winner-undo)
 (global-set-key (kbd "C-x 5 ?") 'winner-redo)
-(global-set-key (kbd "s-{") 'elscreen-previous)
-(global-set-key (kbd "s-}") 'elscreen-next)
 
 ;; Osx style bindings
 (global-set-key (kbd "s-q") 'save-buffers-kill-terminal)
@@ -192,6 +191,8 @@ DIR-NAME - The directory name"
 (global-set-key (kbd "s-h") 'windmove-left)
 (global-set-key (kbd "s-k") 'windmove-up)
 (global-set-key (kbd "s-j") 'windmove-down)
+
+(global-set-key (kbd "s-'") 'company-yasnippet)
 
 (global-set-key (kbd "C-;") 'ace-jump-mode)
 

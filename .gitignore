@@ -31,3 +31,4 @@ tmp/
 /emacs/.emacs.d/.org-id-locations
 /emacs/.emacs.d/elpa
 *.orig
+.mc-lists.el

@@ -29,7 +29,9 @@ if [[ $OSTYPE == darwin* ]]; then
     export EC2_HOME=~/.ec2
     export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
     export PROJECTS_HOME=~/Development/Projects
+    export GOVERSION=$(brew list go | head -n 1 | cut -d '/' -f 6)
     export GOPATH=~/Development/go
+    export GOROOT=$(brew --prefix)/Cellar/go/$GOVERSION
     export ANDROID_HOME=~/Development/Libraries/android-sdk-macosx
     export MAILDIR_CACHE=~/Library/Caches/OfflineImap
     export NPM_HOME=/usr/local/Cellar/node/`node --version | tr -d 'v'`/lib/node_modules/npm

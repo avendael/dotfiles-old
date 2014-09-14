@@ -44,17 +44,17 @@
 (require 'avendael-scratch)
 (require 'avendael-org)
 (require 'avendael-ediff)
+(require 'avendael-python)
 (require 'avendael-ruby)
+(require 'avendael-flymake)
 
 ;; Third party package customizations
 (require 'avendael-ag)
 (require 'avendael-lambda)
 (require 'avendael-irc)
 (require 'avendael-flycheck)
-(require 'avendael-elscreen)
 (require 'avendael-uniquify)
-(require 'avendael-elpy)
-(require 'avendael-autocomplete)
+(require 'avendael-company)
 (require 'avendael-pony)
 (require 'avendael-wrap-region)
 (require 'avendael-helm)
@@ -64,6 +64,7 @@
 (require 'avendael-web-mode)
 (require 'avendael-powerline)
 (require 'avendael-evil)
+(require 'avendael-perspective)
 
 (provide 'init)
 ;;; init.el ends here

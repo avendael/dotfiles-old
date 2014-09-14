@@ -7,6 +7,8 @@
 ;;; Code:
 (require 'evil)
 (require 'evil-leader)
+(require 'evil-nerd-commenter)
+(require 'persp-projectile)
 
 (global-evil-leader-mode)
 (setq-default evil-cross-lines t)
@@ -36,60 +38,60 @@
 (define-key evil-normal-state-map (kbd "C-w 0") 'delete-window)
 
 (evil-leader/set-leader "<SPC>")
+
 (evil-leader/set-key
- "f" 'ido-find-file
- "s" 'ido-switch-buffer
- "d" 'ido-dired
- "k" 'ido-kill-buffer
- "i" 'imenu
+    "f" 'ido-find-file
+    "F" 'helm-for-files
+    "s" 'ido-switch-buffer
+    "d" 'ido-dired
+    "k" 'ido-kill-buffer
+    "i" 'imenu
+    "<SPC>" 'company-yasnippet
 
- ;; extended commands
- "xt" 'create-tags
+    ;; extended commands
+    "xt" 'create-tags
 
- ;; helm
- "gg" 'helm-git-grep
- "gt" 'helm-etags-select
- "hc" 'helm-flycheck
- "h#" 'helm-themes
- "hgg" 'helm-ag
- "hgd" 'helm-do-ag
+    ;; helm
+    "gg" 'helm-git-grep
+    "gt" 'helm-etags-select
+    "hc" 'helm-flycheck
+    "h#" 'helm-themes
+    "hgg" 'helm-ag
+    "hgd" 'helm-do-ag
 
- ;; shell
- "ts" 'shell
- "tt" 'ansi-term
- "tp" 'shell-pwd
+    ;; shell
+    "ts" 'shell
+    "te" 'eshell
+    "tt" 'ansi-term
+    "tp" 'shell-pwd
 
- ;; projectile
- "pf" 'projectile-find-file
- "ps" 'projectile-switch-project
- "pg" 'projectile-ag
+    ;; projectile/perspective
+    "pf" 'projectile-find-file
+    "ps" 'projectile-persp-switch-project
+    "pg" 'projectile-ag
+    "pd" 'projectile-dired
+    "ph" 'persp-prev
+    "pl" 'persp-next
+    "pr" 'persp-rename
+    "pw" 'persp-switch
+    "pk" 'persp-kill
 
- ;; magit
- "ms" 'magit-status
- "mc" 'magit-checkout
- "mg" 'magit-run-gitk
- "ml" 'magit-log
- "mf" 'magit-fetch
- "mr" 'magit-reflog
+    ;; evil nerd commenter
+    "''" 'evilnc-comment-or-uncomment-lines
+    "'l" 'evilnc-comment-or-uncomment-to-the-line
+    "'c" 'evilnc-copy-and-comment-lines
+    "'p" 'evilnc-comment-or-uncomment-paragraphs
+    "'r" 'comment-or-uncomment-region
 
- ;; elscreen
- "ec" 'elscreen-create
- "et" 'elscreen-toggle-display-tab
- "ei" 'elscreen-display-time
- "es" 'elscreen-select-and-goto
- "ep" 'elscreen-previous
- "en" 'elscreen-next
- "ej" 'elscreen-jump
- "ed" 'elscreen-dired
- "ex" 'elscreen-execute-extended-command
- "ek" 'elscreen-kill
- "eq" 'elscreen-kill-screen-and-buffers
- "eo" 'elscreen-kill-others
- "el" 'elscreen-clone
- "er" 'elscreen-find-and-goto-by-buffer
- "ef" 'elscreen-find-file
- "em" 'elscreen-display-last-message
- "e?" 'elscreen-help)
+    ;; magit
+    "ms" 'magit-status
+    "mc" 'magit-checkout
+    "mg" 'magit-run-gitk
+    "ml" 'magit-log
+    "mf" 'magit-fetch
+    "mr" 'magit-reflog
+    "mb" 'magit-blame-mode)
+
 (evil-leader/set-key-for-mode 'python-mode
   "<" 'python-indent-shift-left
   ">" 'python-indent-shift-right

@@ -28,6 +28,9 @@
 (setq js2-basic-offset 2)
 (setq js2-bounce-indent-p t)
 (setq js2-auto-indent-p nil)
+(setq js2-concat-multiline-strings t)
+(setq js2-mode-show-parse-errors nil)
+(setq js2-highlight-external-variables nil)
 
 (setq-default js2-global-externs
               '("clearTimeout" "setInterval" "clearInterval" "location" "__dirname"
