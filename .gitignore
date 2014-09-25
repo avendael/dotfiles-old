@@ -30,5 +30,6 @@ tmp/
 *.pyc
 /emacs/.emacs.d/.org-id-locations
 /emacs/.emacs.d/elpa
+/emacs/.emacs.d/cask
 *.orig
 .mc-lists.el

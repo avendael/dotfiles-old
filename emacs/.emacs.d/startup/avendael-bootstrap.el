@@ -9,7 +9,5 @@
 (cask-initialize)
 (require 'pallet)
 
-(require 'elscreen)
-
 (provide 'avendael-bootstrap)
 ;;; avendael-bootstrap.el ends here

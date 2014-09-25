@@ -176,11 +176,11 @@ DIR-NAME - The directory name"
 (global-set-key (kbd "<s-up>") 'scroll-down-command)
 (global-set-key (kbd "<s-down>") 'scroll-up-command)
 (global-set-key (kbd "<C-s-f>") 'maximize-frame)
+(global-set-key (kbd "<s-DEL>") 'backward-kill-word)
+(global-set-key (kbd "<s-backspace>") 'backward-kill-word)
 
 ;; Sublime style bindings
-(global-set-key (kbd "s-S-r") 'helm-git-grep)
 (global-set-key (kbd "s-r") 'imenu)
-(global-set-key (kbd "s-S-p") 'smex)
 
 ;; Windmove
 (global-set-key (kbd "C-s-l") 'windmove-right)

@@ -39,7 +39,6 @@
 (require 'avendael-ido)
 (require 'avendael-expand-region)
 (require 'avendael-projectile)
-(require 'avendael-desktop)
 (require 'avendael-yasnippet)
 (require 'avendael-scratch)
 (require 'avendael-org)

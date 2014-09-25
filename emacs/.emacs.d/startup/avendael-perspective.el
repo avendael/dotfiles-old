@@ -15,6 +15,9 @@
 
 (global-set-key (kbd "s-{") 'persp-prev)
 (global-set-key (kbd "s-}") 'persp-next)
+(global-set-key (kbd "s-e ps") 'persp-switch)
+(global-set-key (kbd "s-e pk") 'persp-kill)
+(global-set-key (kbd "s-e pr") 'persp-rename)
 
 (provide 'avendael-perspective)
 ;;; avendael-perspective.el ends here
