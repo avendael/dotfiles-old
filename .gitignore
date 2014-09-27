@@ -24,6 +24,7 @@ projectile.cache
 secrets.el.gpg
 *.gpg
 emacs/.emacs.d/.cask/
+emacs/.emacs.d/request/
 .ruby-version
 url/
 tmp/

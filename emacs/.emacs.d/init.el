@@ -46,6 +46,7 @@
 (require 'avendael-python)
 (require 'avendael-ruby)
 (require 'avendael-flymake)
+(require 'avendael-osx)
 
 ;; Third party package customizations
 (require 'avendael-ag)
@@ -58,6 +59,7 @@
 (require 'avendael-wrap-region)
 (require 'avendael-helm)
 (require 'avendael-misc)
+(require 'avendael-windmove)
 (require 'avendael-magit)
 (require 'avendael-js)
 (require 'avendael-web-mode)

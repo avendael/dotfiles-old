@@ -18,6 +18,7 @@
 (global-set-key (kbd "s-e ps") 'persp-switch)
 (global-set-key (kbd "s-e pk") 'persp-kill)
 (global-set-key (kbd "s-e pr") 'persp-rename)
+(global-set-key (kbd "s-p w") 'persp-switch)
 
 (provide 'avendael-perspective)
 ;;; avendael-perspective.el ends here

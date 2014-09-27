@@ -113,6 +113,12 @@
   "opt" 'pony-test
   "opgs" 'pony-goto-settings
   "opgt" 'pony-goto-template)
+
+(evil-leader/set-key-for-mode 'org-mode
+  "otc" 'org-trello/create-board-and-install-metadata
+  "oti" 'org-trello/install-board-metadata
+  "ots" 'org-trello/sync-buffer)
+
 (evil-mode 1)
 
 (provide 'avendael-evil)

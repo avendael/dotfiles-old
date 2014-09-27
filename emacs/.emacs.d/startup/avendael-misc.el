@@ -149,12 +149,6 @@ DIR-NAME - The directory name"
 (global-set-key (kbd "C-c C-M-S-c") 'crosshairs)
 (global-set-key (kbd "C-x M-f") 'ffip)
 (global-set-key (kbd "C-x SPC") 'just-one-space)
-(global-set-key (kbd "M-[") 'backward-paragraph)
-(global-set-key (kbd "M-]") 'forward-paragraph)
-(define-key compilation-shell-minor-mode-map (kbd "M-{") 'elscreen-previous)
-(define-key compilation-shell-minor-mode-map (kbd "M-}") 'elscreen-next)
-(define-key compilation-shell-minor-mode-map (kbd "C-c M-{") 'compilation-previous-file)
-(define-key compilation-shell-minor-mode-map (kbd "C-c M-}") 'compilation-next-file)
 
 ;;-- Additional frame bindings --;;
 (global-set-key (kbd "C-x 5 n") 'ns-next-frame)
@@ -162,35 +156,8 @@ DIR-NAME - The directory name"
 (global-set-key (kbd "C-x 5 /") 'winner-undo)
 (global-set-key (kbd "C-x 5 ?") 'winner-redo)
 
-;; Osx style bindings
-(global-set-key (kbd "s-q") 'save-buffers-kill-terminal)
-(global-set-key (kbd "s-v") 'yank)
-(global-set-key (kbd "s-c") 'kill-ring-save)
-(global-set-key (kbd "s-w") 'kill-this-buffer)
-(global-set-key (kbd "s-x") 'smex)
-(global-set-key (kbd "s-z") 'undo-tree-undo)
-(global-set-key (kbd "s-s") 'save-buffer)
-(global-set-key (kbd "s-Z") 'undo-tree-redo)
-(global-set-key (kbd "<s-left>") 'move-beginning-of-line)
-(global-set-key (kbd "<s-right>") 'move-end-of-line)
-(global-set-key (kbd "<s-up>") 'scroll-down-command)
-(global-set-key (kbd "<s-down>") 'scroll-up-command)
-(global-set-key (kbd "<C-s-f>") 'maximize-frame)
-(global-set-key (kbd "<s-DEL>") 'backward-kill-word)
-(global-set-key (kbd "<s-backspace>") 'backward-kill-word)
-
 ;; Sublime style bindings
 (global-set-key (kbd "s-r") 'imenu)
-
-;; Windmove
-(global-set-key (kbd "C-s-l") 'windmove-right)
-(global-set-key (kbd "C-s-h") 'windmove-left)
-(global-set-key (kbd "C-s-k") 'windmove-up)
-(global-set-key (kbd "C-s-j") 'windmove-down)
-(global-set-key (kbd "s-l") 'windmove-right)
-(global-set-key (kbd "s-h") 'windmove-left)
-(global-set-key (kbd "s-k") 'windmove-up)
-(global-set-key (kbd "s-j") 'windmove-down)
 
 (global-set-key (kbd "s-'") 'company-yasnippet)
 
@@ -201,10 +168,6 @@ DIR-NAME - The directory name"
 (add-hook 'prog-mode-hook 'linum-mode)
 (add-hook 'prog-mode-hook 'diff-hl-mode)
 (add-hook 'prog-mode-hook 'wrap-region-mode)
-
-(add-hook 'html-mode-hook 'linum-mode)
-(add-hook 'html-mode-hook 'wrap-region-mode)
-(add-hook 'html-mode-hook 'diff-hl-mode)
 
 (setq initial-frame-alist (set-frame-parameter nil 'fullscreen 'fullheight))
 (setq linum-relative-current-symbol "")

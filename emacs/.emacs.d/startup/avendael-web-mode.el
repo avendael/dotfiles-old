@@ -20,6 +20,10 @@
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 
+(add-hook 'html-mode-hook 'linum-mode)
+(add-hook 'html-mode-hook 'wrap-region-mode)
+(add-hook 'html-mode-hook 'diff-hl-mode)
+
 (web-mode-toggle-current-element-highlight)
 (provide 'avendael-web-mode)
 ;;; avendael-web-mode.el ends here

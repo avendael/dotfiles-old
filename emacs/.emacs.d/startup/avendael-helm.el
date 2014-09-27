@@ -14,6 +14,7 @@
 (global-set-key (kbd "s-R") 'helm-git-grep)
 (global-set-key (kbd "s-P") 'helm-M-x)
 (global-set-key (kbd "s-t") 'helm-buffers-list)
+(global-set-key (kbd "s-o") 'helm-find-files)
 
 (provide 'avendael-helm)
 ;;; avendael-helm.el ends here

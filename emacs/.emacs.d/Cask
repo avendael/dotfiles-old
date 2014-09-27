@@ -1,6 +1,7 @@
 (source gnu)
 (source marmalade)
 (source melpa)
+(source melpa-stable)
 
 (depends-on "ace-jump-mode")
 (depends-on "ag")
@@ -114,6 +115,8 @@
 (depends-on "tern")
 (depends-on "unbound")
 (depends-on "undo-tree")
+(depends-on "vagrant")
+(depends-on "vagrant-tramp")
 (depends-on "vline")
 (depends-on "web")
 (depends-on "web-mode")
