@@ -12,7 +12,6 @@
 (require 'ido)
 (require 'ido-ubiquitous)
 (require 'ido-vertical-mode)
-(require 'smex)
 
 ;; The ido part
 (ido-mode)
@@ -20,10 +19,6 @@
       ido-everywhere t)
 (ido-ubiquitous-mode)
 (ido-vertical-mode 1)
-
-;; The smex part
-(smex-initialize)
-(global-set-key (kbd "M-x") 'smex)
 
 (provide 'avendael-ido)
 ;;; avendael-ido.el ends here

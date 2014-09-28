@@ -156,9 +156,6 @@ DIR-NAME - The directory name"
 (global-set-key (kbd "C-x 5 /") 'winner-undo)
 (global-set-key (kbd "C-x 5 ?") 'winner-redo)
 
-;; Sublime style bindings
-(global-set-key (kbd "s-r") 'imenu)
-
 (global-set-key (kbd "s-'") 'company-yasnippet)
 
 (global-set-key (kbd "C-;") 'ace-jump-mode)

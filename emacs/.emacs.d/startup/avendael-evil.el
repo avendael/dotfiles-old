@@ -40,12 +40,7 @@
 (evil-leader/set-leader "<SPC>")
 
 (evil-leader/set-key
-    "f" 'ido-find-file
-    "F" 'helm-for-files
-    "s" 'ido-switch-buffer
-    "d" 'ido-dired
-    "k" 'ido-kill-buffer
-    "i" 'imenu
+    "s" 'save-buffer
     "<SPC>" 'company-yasnippet
 
     ;; extended commands
@@ -93,33 +88,46 @@
     "mb" 'magit-blame-mode)
 
 (evil-leader/set-key-for-mode 'python-mode
-  "<" 'python-indent-shift-left
-  ">" 'python-indent-shift-right
+    "<" 'python-indent-shift-left
+    ">" 'python-indent-shift-right
 
-  "ow" 'pyvenv-workon
-  "oe" 'pyvenv-deactivate
-  "or" 'run-python
-  "od" 'elpy-doc
-  "os" 'elpy-shell-switch-to-shell
-  "o." 'elpy-goto-definition
+    "ow" 'pyvenv-workon
+    "oe" 'pyvenv-deactivate
+    "or" 'run-python
+    "od" 'elpy-doc
+    "os" 'elpy-shell-switch-to-shell
+    "o." 'elpy-goto-definition
 
-  ;; pony
-  "opb" 'pony-browser
-  "ops" 'pony-shell
-  "opd" 'pony-db-shell
-  "opf" 'pony-fabric
-  "opm" 'pony-manage
-  "opr" 'pony-runserver
-  "opt" 'pony-test
-  "opgs" 'pony-goto-settings
-  "opgt" 'pony-goto-template)
+    ;; pony
+    "opb" 'pony-browser
+    "ops" 'pony-shell
+    "opd" 'pony-db-shell
+    "opf" 'pony-fabric
+    "opm" 'pony-manage
+    "opr" 'pony-runserver
+    "opt" 'pony-test
+    "opgs" 'pony-goto-settings
+    "opgt" 'pony-goto-template)
 
 (evil-leader/set-key-for-mode 'org-mode
-  "otc" 'org-trello/create-board-and-install-metadata
-  "oti" 'org-trello/install-board-metadata
-  "ots" 'org-trello/sync-buffer)
+    "otc" 'org-trello/create-board-and-install-metadata
+    "oti" 'org-trello/install-board-metadata
+    "ots" 'org-trello/sync-buffer
+    "otb" 'org-trello/sync-card)
+
+(evil-leader/set-key-for-mode 'elixir-mode
+    "otb" 'elixir-mix-test-this-buffer
+    "ott" 'elixir-mix-test
+    "otf" 'elixir-mix-test-file
+    "ot." 'elixir-mix-test-at-point
+
+    "oc" 'elixir-mix-compile
+    "or" 'elixir-mix-run
+    "oh" 'elixir-mix-help)
 
 (evil-mode 1)
+
+(require 'evil-org)
 
 (provide 'avendael-evil)
 ;;; avendael-evil.el ends here

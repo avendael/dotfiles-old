@@ -12,9 +12,15 @@
 (setq helm-buffers-fuzzy-matching t)
 
 (global-set-key (kbd "s-R") 'helm-git-grep)
+(global-set-key (kbd "s-r") 'helm-imenu)
 (global-set-key (kbd "s-P") 'helm-M-x)
-(global-set-key (kbd "s-t") 'helm-buffers-list)
-(global-set-key (kbd "s-o") 'helm-find-files)
+(global-set-key (kbd "s-t") 'helm-mini)
+(global-set-key (kbd "s-f") 'helm-find-files)
+(global-set-key (kbd "s-F") 'helm-for-files)
+(global-set-key (kbd "s-y") 'helm-show-kill-ring)
+(global-set-key (kbd "s-f") 'helm-recentf)
+
+(global-set-key (kbd "C-h f") 'helm-apropos)
 
 (provide 'avendael-helm)
 ;;; avendael-helm.el ends here
