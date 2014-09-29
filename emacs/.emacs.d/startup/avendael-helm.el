@@ -18,7 +18,7 @@
 (global-set-key (kbd "s-f") 'helm-find-files)
 (global-set-key (kbd "s-F") 'helm-for-files)
 (global-set-key (kbd "s-y") 'helm-show-kill-ring)
-(global-set-key (kbd "s-f") 'helm-recentf)
+(global-set-key (kbd "s-o") 'helm-recentf)
 
 (global-set-key (kbd "C-h f") 'helm-apropos)
 
