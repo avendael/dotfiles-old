@@ -66,6 +66,7 @@
 (require 'avendael-powerline)
 (require 'avendael-evil)
 (require 'avendael-perspective)
+(require 'avendael-tweet)
 
 (provide 'init)
 ;;; init.el ends here

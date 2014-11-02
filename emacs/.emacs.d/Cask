@@ -1,7 +1,6 @@
 (source gnu)
 (source marmalade)
 (source melpa)
-(source melpa-stable)
 
 (depends-on "ace-jump-mode")
 (depends-on "ag")
@@ -49,6 +48,7 @@
 (depends-on "go-mode")
 (depends-on "go-projectile")
 (depends-on "go-snippets")
+(depends-on "haskell-mode")
 (depends-on "helm")
 (depends-on "helm-ag")
 (depends-on "helm-flycheck")
@@ -113,6 +113,7 @@
 (depends-on "sr-speedbar")
 (depends-on "sublime-themes")
 (depends-on "tern")
+(depends-on "twittering-mode")
 (depends-on "unbound")
 (depends-on "undo-tree")
 (depends-on "vagrant")

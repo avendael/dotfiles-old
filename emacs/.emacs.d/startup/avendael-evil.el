@@ -41,6 +41,8 @@
 
 (evil-leader/set-key
     "s" 'save-buffer
+    "d" 'dash-at-point
+    "D" 'dash-at-point-with-docset
     "<SPC>" 'company-yasnippet
 
     ;; extended commands

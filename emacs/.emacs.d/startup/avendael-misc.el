@@ -150,7 +150,7 @@ DIR-NAME - The directory name"
 (global-set-key (kbd "C-x M-f") 'ffip)
 (global-set-key (kbd "C-x SPC") 'just-one-space)
 
-;;-- Additional frame bindings --;;
+;; Additional frame bindings
 (global-set-key (kbd "C-x 5 n") 'ns-next-frame)
 (global-set-key (kbd "C-x 5 p") 'ns-prev-frame)
 (global-set-key (kbd "C-x 5 /") 'winner-undo)
