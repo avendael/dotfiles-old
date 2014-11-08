@@ -8,9 +8,11 @@
 (require 'evil)
 (require 'evil-leader)
 (require 'evil-nerd-commenter)
+(require 'evil-surround)
 (require 'persp-projectile)
 
 (global-evil-leader-mode)
+(global-evil-surround-mode 1)
 (setq-default evil-cross-lines t)
 
 (define-key minibuffer-local-map
