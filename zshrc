@@ -1,3 +1,4 @@
+# -*- mode: shell-script -*-
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="avendael"
 COMPLETION_WAITING_DOTS="true"
@@ -6,6 +7,7 @@ COMPLETION_WAITING_DOTS="true"
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
+export github_user="avendael"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -22,21 +24,27 @@ source $ZSH/oh-my-zsh.sh
 export KEYTIMEOUT=1
 
 if [[ $OSTYPE == darwin* ]]; then
-    export EDITOR=/usr/local/bin/vim
-    export DOCKER_HOST=tcp://localhost:4243
-    export LC_ALL=en_US.UTF-8
+    export EDITOR=emacsclient
     export LANG=en_US.UTF-8
+    export LC_ALL=en_US.UTF-8
+
+    if dvm env > /dev/null; then
+        eval $(dvm env)
+    fi
+
+    export ANDROID_HOME=~/Development/Libraries/android-sdk-macosx
+    export ATOM_REPOS_HOME=~/Development/Projects/atom
+    export PROJECTS_HOME=~/Development/Projects
     export EC2_HOME=~/.ec2
     export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
-    export PROJECTS_HOME=~/Development/Projects
+
     export GOVERSION=$(brew list go | head -n 1 | cut -d '/' -f 6)
     export GOPATH=~/Development/go
     export GOROOT=$(brew --prefix)/Cellar/go/$GOVERSION
-    export ANDROID_HOME=~/Development/Libraries/android-sdk-macosx
+
     export MAILDIR_CACHE=~/Library/Caches/OfflineImap
-    export NPM_HOME=/usr/local/Cellar/node/`node --version | tr -d 'v'`/lib/node_modules/npm
-    export ATOM_REPOS_HOME=~/Development/Projects/atom
-    export PATH=~/bin:${GOPATH}/bin:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools:${EC2_HOME}/bin:${NPM_HOME}/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
+    export NVM_DIR=~/.nvm
+    export PATH=~/bin:${NPM_BIN}:${GOPATH}/bin:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools:${EC2_HOME}/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
 
     # Include osx specific aliases
     alias ls='ls -G'
@@ -47,6 +55,9 @@ if [[ $OSTYPE == darwin* ]]; then
     else
         echo "Virtualenvwrapper not found"
     fi
+
+    # Include nvm
+    source $(brew --prefix nvm)/nvm.sh
 
     # Include EC2 keys
     if [ -f ${EC2_HOME}/env.sh ]; then
@@ -105,3 +116,4 @@ fi
 
 alias c=clear
 alias gss="git status -sb"
+alias e="f -e emacsclient -n"
