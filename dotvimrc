@@ -14,12 +14,10 @@ NeoBundle 'gmarik/Vundle.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-commentary'
-NeoBundle 'majutsushi/tagbar'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'sickill/vim-monokai'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'altercation/vim-colors-solarized'
-NeoBundle 'davidhalter/jedi-vim'
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'bling/vim-airline'
@@ -30,14 +28,12 @@ NeoBundle 'jmcantrell/vim-virtualenv'
 NeoBundle 'rking/ag.vim'
 NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'jpalardy/vim-slime'
-NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'ervandew/supertab'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'christoomey/vim-tmux-navigator'
 NeoBundle 'jamessan/vim-gnupg'
-NeoBundle 'fatih/vim-go'
 NeoBundle 'Shougo/vimproc.vim', {
       \ 'build' : {
       \     'windows' : 'tools\\update-dll-mingw',
@@ -152,15 +148,15 @@ map <leader>mw :Gwrite<CR>
 
 " *ycm* "
 
-let g:ycm_key_list_select_completion = ['<C-Tab>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-S-Tab>', '<Up>']
-let g:SuperTabDefaultCompletionType = '<C-Tab>'
-let g:ycm_path_to_python_interpreter = '/usr/bin/python'
-nnoremap <leader>gd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+"let g:ycm_key_list_select_completion = ['<C-Tab>', '<Down>']
+"let g:ycm_key_list_previous_completion = ['<C-S-Tab>', '<Up>']
+"let g:SuperTabDefaultCompletionType = '<C-Tab>'
+"let g:ycm_path_to_python_interpreter = '/usr/bin/python'
+"nnoremap <leader>gd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " *jedi* "
 
-autocmd FileType python setlocal completeopt-=preview
+"autocmd FileType python setlocal completeopt-=preview
 
 " *ultisnips* "
 
