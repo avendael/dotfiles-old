@@ -107,6 +107,16 @@ function zle-line-init zle-keymap-select {
     zle reset-prompt
 }
 
+function show_ansi_colors {
+    for i in {0..255} ; do
+        printf "\x1b[38;5;${i}mcolour${i}\n"
+    done
+}
+
+function kill_emacs_daemon {
+    emacsclient -e "(kill-emacs)"
+}
+
 zle -N zle-line-init
 zle -N zle-keymap-select
 
@@ -117,3 +127,5 @@ fi
 alias c=clear
 alias gss="git status -sb"
 alias e="f -e emacsclient -n"
+alias en="emacsclient -n"
+alias et="emacsclient -t"
