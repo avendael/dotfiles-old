@@ -9,13 +9,6 @@ COMPLETION_WAITING_DOTS="true"
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 export github_user="avendael"
 
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
 plugins=(git fasd brew)
 
 source $ZSH/oh-my-zsh.sh
@@ -35,7 +28,7 @@ if [[ $OSTYPE == darwin* ]]; then
     export ANDROID_HOME=~/Development/Libraries/android-sdk-macosx
     export ATOM_REPOS_HOME=~/Development/Projects/atom
     export PROJECTS_HOME=~/Development/Projects
-    export EC2_HOME=~/.ec2
+    export AWS_HOME=~/.aws
     export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
 
     export GOVERSION=$(brew list go | head -n 1 | cut -d '/' -f 6)
@@ -44,7 +37,7 @@ if [[ $OSTYPE == darwin* ]]; then
 
     export MAILDIR_CACHE=~/Library/Caches/OfflineImap
     export NVM_DIR=~/.nvm
-    export PATH=~/bin:${NPM_BIN}:${GOPATH}/bin:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools:${EC2_HOME}/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
+    export PATH=~/bin:${GOPATH}/bin:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools:${EC2_HOME}/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
 
     # Include osx specific aliases
     alias ls='ls -G'
@@ -59,9 +52,9 @@ if [[ $OSTYPE == darwin* ]]; then
     # Include nvm
     source $(brew --prefix nvm)/nvm.sh
 
-    # Include EC2 keys
-    if [ -f ${EC2_HOME}/env.sh ]; then
-        . ${EC2_HOME}/env.sh
+    # Include AWS keys
+    if [ -f ${AWS_HOME}/env.sh ]; then
+        . ${AWS_HOME}/env.sh
     fi
 fi
 
