@@ -1,3 +1,4 @@
+# -*- mode: conf -*-
 " Include NeoBundle in runtime path and initialize
 if has('vim_starting')
     set nocompatible
