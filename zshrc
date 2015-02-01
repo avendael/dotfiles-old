@@ -27,6 +27,7 @@ if [[ $OSTYPE == darwin* ]]; then
     fi
 
     export ANDROID_HOME=~/Development/Libraries/android-sdk-macosx
+    export PYTHON_HOME=~/Library/Python/2.7
     export ATOM_REPOS_HOME=~/Development/Projects/atom
     export PROJECTS_HOME=~/Development/Projects
     export AWS_HOME=~/.aws
@@ -38,7 +39,7 @@ if [[ $OSTYPE == darwin* ]]; then
 
     export MAILDIR_CACHE=~/Library/Caches/OfflineImap
     export NVM_DIR=~/.nvm
-    export PATH=~/bin:${GOPATH}/bin:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools:${EC2_HOME}/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
+    export PATH=~/bin:${PYTHON_HOME}/bin:${GOPATH}/bin:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools:${EC2_HOME}/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
 
     # Include osx specific aliases
     alias ls='ls -G'
