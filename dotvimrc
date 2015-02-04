@@ -1,23 +1,25 @@
-# -*- mode: conf -*-
+" Note: Skip initialization for vim-tiny or vim-small.
+if !1 | finish | endif
+
 " Include NeoBundle in runtime path and initialize
 if has('vim_starting')
-    set nocompatible
+  if &compatible
+    set nocompatible               " Be iMproved
+  endif
 
-    " Required:
-    set rtp+=~/.vim/bundle/neobundle.vim/
+  " Required:
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
 call neobundle#begin(expand('~/.vim/bundle/'))
 
 " Le Plugins
 NeoBundleFetch 'Shougo/neobundle.vim'
-NeoBundle 'gmarik/Vundle.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'sickill/vim-monokai'
-NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'scrooloose/syntastic'
@@ -28,7 +30,6 @@ NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'jmcantrell/vim-virtualenv'
 NeoBundle 'rking/ag.vim'
 NeoBundle 'jiangmiao/auto-pairs'
-NeoBundle 'jpalardy/vim-slime'
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'ervandew/supertab'
@@ -45,7 +46,7 @@ NeoBundle 'Shougo/vimproc.vim', {
       \ }
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/unite.vim'
-NeoBundle 'tsukkee/unite-tag'
+"NeoBundle 'tsukkee/unite-tag'
 
 call neobundle#end()
 
@@ -129,23 +130,23 @@ map <leader>ga :Ag
 
 " *tagbar* "
 
-map <leader>kt :TagbarToggle<CR>
+"map <leader>kt :TagbarToggle<CR>
 
 " *slime* "
 
-let g:slime_target = "tmux"
-let g:slime_python_ipython = 1
+"let g:slime_target = "tmux"
+"let g:slime_python_ipython = 1
 
 " *fugitive* "
 
-map <leader>ms :Gstatus<CR>
-map <leader>mb :Gblame<CR>
-map <leader>mc :Gcommit<CR>
-map <leader>mm :Gmove<CR>
-map <leader>mr :Gremove<CR>
-map <leader>ml :Glog<CR>
-map <leader>md :Gdiff<CR>
-map <leader>mw :Gwrite<CR>
+map <leader>gs :Gstatus<CR>
+map <leader>gb :Gblame<CR>
+map <leader>gc :Gcommit<CR>
+map <leader>gm :Gmove<CR>
+map <leader>gr :Gremove<CR>
+map <leader>gl :Glog<CR>
+map <leader>gd :Gdiff<CR>
+map <leader>gw :Gwrite<CR>
 
 " *ycm* "
 
@@ -153,7 +154,7 @@ map <leader>mw :Gwrite<CR>
 "let g:ycm_key_list_previous_completion = ['<C-S-Tab>', '<Up>']
 "let g:SuperTabDefaultCompletionType = '<C-Tab>'
 "let g:ycm_path_to_python_interpreter = '/usr/bin/python'
-"nnoremap <leader>gd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+"nnoremap <leader>sd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " *jedi* "
 
@@ -167,7 +168,7 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 " *emmet* "
 
-imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+"imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
 " *unite* "
 
@@ -182,7 +183,7 @@ call unite#filters#matcher_default#use(['matcher_fuzzy'])
 call unite#filters#sorter_default#use(['sorter_rank'])
 
 " Fuzzy file finder
-nmap <leader>f :Unite file_rec/async<CR>
+nmap <leader>ff :Unite file_rec/async<CR>
 
 if executable('ag')
     let g:unite_source_grep_command = 'ag'
@@ -225,5 +226,6 @@ nmap <silent> <C-j> :wincmd j<CR>
 nmap <silent> <C-l> :wincmd l<CR>
 nmap <silent> <C-h> :wincmd h<CR>
 
-nmap <leader>s :w<CR>
+nmap <leader>fs :w<CR>
 nmap <leader>Q :qall!<CR>
+NeoBundleCheck
