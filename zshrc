@@ -112,6 +112,10 @@ function kill_emacs_daemon {
     emacsclient -e "(kill-emacs)"
 }
 
+if hub --version > /dev/null; then
+    eval "$(hub alias -s)"
+fi
+
 zle -N zle-line-init
 zle -N zle-keymap-select
 
