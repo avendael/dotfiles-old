@@ -26,7 +26,7 @@ if [[ $OSTYPE == darwin* ]]; then
         eval $(dvm env)
     fi
 
-    export ANDROID_HOME=~/Development/Libraries/android-sdk-macosx
+    export ANDROID_HOME=~/Library/android/sdk
     export PYTHON_HOME=~/Library/Python/2.7
     export ATOM_REPOS_HOME=~/Development/Projects/atom
     export PROJECTS_HOME=~/Development/Projects
