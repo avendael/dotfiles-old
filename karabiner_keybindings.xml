@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!-- This is private.xml in Karabiner -->
+<root>
+  <appdef>
+    <appname>EMACS</appname>
+    <equal>org.gnu.Emacs</equal>
+  </appdef>
+
+  <appdef>
+    <appname>VIRTUALBOX</appname>
+    <equal>org.virtualbox.app.VirtualBoxVM</equal>
+  </appdef>
+
+  <item>
+    <name>Emacs cmd h</name>
+    <identifier>private.app.org.gnu.Emacs.cmd_h</identifier>
+    <only>EMACS</only>
+    <autogen>
+      __KeyToKey__
+      KeyCode::H, ModifierFlag::COMMAND_L,
+      KeyCode::H, ModifierFlag::COMMAND_L | ModifierFlag::CONTROL_L
+    </autogen>
+  </item>
+
+
+  <item>
+    <name>Don't hide virtualbox</name>
+    <identifier>private.app.org.virtualbox.app.VirtualBoxVM.cmd_h</identifier>
+    <only>VIRTUALBOX</only>
+    <autogen>
+      __KeyToKey__
+      KeyCode::H, ModifierFlag::COMMAND_L,
+      KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L
+    </autogen>
+  </item>
+</root>
