@@ -44,3 +44,13 @@ if [[ $OSTYPE == darwin* ]]; then
 fi
 
 export PS1="\[\e[0;34m\][\u@\h \[\e[0;32m\]\W\[\e[0;34m\]]\$(__git_ps1) \[\e[0;33m\]\$\[\e[0m\] "
+
+function show_ansi_colors {
+    for i in {0..255} ; do
+        printf "\x1b[38;5;${i}mcolour${i}\n"
+    done
+}
+
+function kill_emacs_daemon {
+    emacsclient -e "(kill-emacs)"
+}
