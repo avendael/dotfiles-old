@@ -110,8 +110,8 @@ set directory=~/.vim/swp
 " *theme* "
 
 syntax enable
-set background=dark
-colo Tomorrow-Night
+"set background=dark
+"colo Tomorrow-Night
 
 " *airline* "
 
