@@ -1,5 +1,4 @@
 <?xml version="1.0"?>
-<!-- This is private.xml in Karabiner -->
 <root>
   <appdef>
     <appname>EMACS</appname>
@@ -9,6 +8,11 @@
   <appdef>
     <appname>VIRTUALBOX</appname>
     <equal>org.virtualbox.app.VirtualBoxVM</equal>
+  </appdef>
+
+  <appdef>
+    <appname>PREVIEW</appname>
+    <equal>com.apple.preview</equal>
   </appdef>
 
   <item>
@@ -21,7 +25,23 @@
       KeyCode::H, ModifierFlag::COMMAND_L | ModifierFlag::CONTROL_L
     </autogen>
   </item>
-
+  
+  <item>
+    <name>Vi Navigation in Preview</name>
+    <identifier>private.preview.vinav</identifier>
+    <only>PREVIEW</only>
+    <uielementrole_not>AXTextField, AXTextArea</uielementrole_not>
+    <modifier_only>
+        ModifierFlag::NONE,
+        ModifierFlag::SHIFT_L | ModifierFlag::NONE,
+        ModifierFlag::SHIFT_R | ModifierFlag::NONE,
+    </modifier_only>
+    <appendix>Navigate using the HJKL keys</appendix>
+    <autogen>__KeyToKey__ KeyCode::J, KeyCode::CURSOR_DOWN</autogen>
+    <autogen>__KeyToKey__ KeyCode::K, KeyCode::CURSOR_UP</autogen>
+    <autogen>__KeyToKey__ KeyCode::H, KeyCode::CURSOR_LEFT</autogen>
+    <autogen>__KeyToKey__ KeyCode::L, KeyCode::CURSOR_RIGHT</autogen>
+  </item>
 
   <item>
     <name>Don't hide virtualbox</name>
